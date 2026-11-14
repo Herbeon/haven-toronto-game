@@ -1,7 +1,37 @@
 [gd_scene format=3 uid="uid://djicpc76ou862"]
 
+[ext_resource type="Script" uid="uid://comi7bj3pjg7w" path="res://head.gd" id="1_hukeq"]
+[ext_resource type="Texture2D" uid="uid://dtu46600amf13" path="res://images and character assets/Head demo.png" id="1_xe7ry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7jktm"]
+radius = 186.00269
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcrup"]
+size = Vector2(222.46553, 232.18356)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xe7ry")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="head" type="CharacterBody2D" unique_id=1583071804]
+script = ExtResource("1_hukeq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1517690692]
+position = Vector2(0, -37)
+shape = SubResource("CircleShape2D_7jktm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=782190149]
+position = Vector2(3.435845, 77.2573)
+rotation = 0.7853982
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_tcrup")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=456965115]
+sprite_frames = SubResource("SpriteFrames_tcrup")
