@@ -45,5 +45,5 @@ func eye_is_done():
 
 
 func ear_is_done():
-	print("helo ear done")
+	#print("helo ear done")
 	pass
