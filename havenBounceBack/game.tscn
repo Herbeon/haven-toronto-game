@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
 [ext_resource type="PackedScene" uid="uid://crvkgv3gvwurq" path="res://ear_1.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ccxtt8gld1bal" path="res://eye_1.tscn" id="7_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://ccu8645egrb3x" path="res://ear_2.tscn" id="8_j5wjh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font_size = 40
@@ -75,6 +76,8 @@ position = Vector2(-530, 815)
 [node name="eye1" parent="." unique_id=244120957 instance=ExtResource("7_j5wjh")]
 z_index = 10
 position = Vector2(-236, 692)
+
+[node name="ear2" parent="." unique_id=1415512742 instance=ExtResource("8_j5wjh")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890427670]
 z_index = -10

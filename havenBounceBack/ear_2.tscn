@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ccu8645egrb3x"]
+
+[ext_resource type="Script" uid="uid://bt80pnhwdrgup" path="res://ear_2.gd" id="1_h07vf"]
+[ext_resource type="Texture2D" uid="uid://bxqrakitudu3g" path="res://images and character assets/Ear 2R.PNG" id="2_cosox"]
+[ext_resource type="Texture2D" uid="uid://dqvf3xyprifuv" path="res://images and character assets/Ear 1R.PNG" id="3_wouo6"]
+[ext_resource type="Texture2D" uid="uid://b3qs1fo25utut" path="res://images and character assets/Ear 3R.PNG" id="4_ba6vg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5wjh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cosox")
+}],
+"loop": 1,
+"name": &"fox",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wouo6")
+}],
+"loop": 1,
+"name": &"human",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ba6vg")
+}],
+"loop": 1,
+"name": &"hungri",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjn2m"]
+radius = 83.2396
+height = 441.93683
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cy5tt"]
+radius = 30.265491
+
+[node name="ear_2" type="CharacterBody2D" unique_id=1415512742]
+script = ExtResource("1_h07vf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1101466303]
+sprite_frames = SubResource("SpriteFrames_j5wjh")
+animation = &"hungri"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1479243569]
+
+[node name="CollisionShape2Dbig" type="CollisionShape2D" parent="." unique_id=1127976003]
+position = Vector2(-2, -3)
+rotation = 0.3839724
+shape = SubResource("CapsuleShape2D_gjn2m")
+
+[node name="CollisionShape2Dsmol" type="CollisionShape2D" parent="." unique_id=129175253]
+shape = SubResource("CircleShape2D_cy5tt")
