@@ -8,10 +8,10 @@ signal out_of_bounds
 func start():
 	position = get_viewport_rect().size / 2
 	
-	var direction_x = 1.0 if randf() > 0.5 else -1.0
+	var direction_x = randf_range(-1,1)
 	# yay gambling
 	
-	var direction_y = randf_range(-0.5,0.5)
+	var direction_y = randf_range(-1,1)
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
@@ -34,7 +34,10 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	# move and collide returns a boolean if it hits something
 	if collision:
+		$EyeDemo2.rotate(PI / 2)
 		velocity = velocity.bounce(collision.get_normal())
+
 		var thing_we_hit = collision.get_collider()
-		
-		velocity *= 1.2
+		print(velocity)
+		if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
+			velocity *= 1.1
