@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://djicpc76ou862"]
+
+[node name="head" type="CharacterBody2D" unique_id=1583071804]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1517690692]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=456965115]

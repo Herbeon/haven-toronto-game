@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://xjdeec8kqs80"]
+
+[ext_resource type="Script" uid="uid://c6w0cgcql5706" path="res://eye.gd" id="1_05vdx"]
+
+[node name="eye" type="CharacterBody2D" unique_id=2145566204]
+script = ExtResource("1_05vdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1753912338]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1844115045]
