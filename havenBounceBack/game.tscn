@@ -59,7 +59,7 @@ offset_left = 820.0
 offset_top = -141.0
 offset_right = 912.0
 offset_bottom = -118.0
-text = "reloads left: 5"
+text = "reloads left: 50"
 label_settings = SubResource("LabelSettings_j5wjh")
 
 [node name="walls" type="TileMapLayer" parent="." unique_id=1476217744]

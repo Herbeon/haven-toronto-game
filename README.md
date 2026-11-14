@@ -23,4 +23,7 @@ the layers are (bottom to top)
 * face: eyes, mouth (10, 11, 12)
 * decoration? (13, 14)
 
+collision layers:
+* 
+
 reloads are available, counted in a total with game script
