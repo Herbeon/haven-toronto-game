@@ -14,7 +14,8 @@ extends Node2D
 @onready var torso = $torso
 
 @onready var head = $head
-@onready var eye1 = $eye
+@onready var eye1 = $eye1
+@onready var ear1 = $ear1
 
 @onready var label = $Control/Label
 
@@ -22,7 +23,7 @@ extends Node2D
 func _ready() -> void:
 	eye1.done_eye.connect(eye_is_done)
 	head.done_head.connect(head_is_done)
-	
+	ear1.done_ear.connect(ear_is_done)
 	new_game()
 
 
@@ -36,9 +37,13 @@ func new_game():
 func head_is_done():
 	label.text = "Currently placing eye"
 	eye1.start()
-	print("start 1 eye")
-	
+	#print("start 1 eye")
+
 func eye_is_done():
-	# call next thing
-	print("hihi")
-	pass
+	label.text = "Currently placing ear"
+	ear1.start()
+
+
+func ear_is_done():
+	
+	print("helo ear done")
