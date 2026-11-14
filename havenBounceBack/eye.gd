@@ -14,10 +14,10 @@ func start():
 	placing_eye = true
 	position = get_viewport_rect().size / 2
 	
-	var direction_x = randf_range(-1,1)
+	var direction_x = randf_range(-0.7,0.7)
 	# yay gambling
 	
-	var direction_y = randf_range(-1,1)
+	var direction_y = randf_range(-0.6,0.6)
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
@@ -40,6 +40,9 @@ func _physics_process(delta):
 		# move and collide returns a boolean if it hits something
 		if collision:
 			#$EyeDemo2.rotate(PI / 2)
+			var tween = create_tween()
+			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)
+			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1,1), 0.1)
 			$AnimatedSprite2D.rotate(PI/2)
 			velocity = velocity.bounce(collision.get_normal())
 
