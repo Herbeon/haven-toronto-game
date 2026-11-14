@@ -39,6 +39,6 @@ func _physics_process(delta):
 		velocity = velocity.bounce(collision.get_normal())
 
 		var thing_we_hit = collision.get_collider()
-		print(velocity)
+		#print(velocity)
 		if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
 			velocity *= 1.1

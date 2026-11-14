@@ -46,7 +46,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.rotate(PI/2)
 			velocity = velocity.bounce(collision.get_normal())
 
-			print(velocity)
+			#print(velocity)
 			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
 				velocity *= 1.1
 		can_be_paused_now = true
