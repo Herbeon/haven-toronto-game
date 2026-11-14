@@ -10,3 +10,14 @@ owo
 boop
 
 hello herby
+
+the layers are (bottom to top)
+* background
+* torso
+* clothes?
+* head
+* hair
+* head accessory
+* hat
+* face: eyes, mouth
+* decoration?
