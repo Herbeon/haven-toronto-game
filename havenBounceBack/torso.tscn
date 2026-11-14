@@ -1,7 +1,34 @@
 [gd_scene format=3 uid="uid://dpfcb61p4xb8e"]
 
+[ext_resource type="Texture2D" uid="uid://csxx1eewvkopf" path="res://images and character assets/cori torso.png" id="1_50s6g"]
+[ext_resource type="Script" uid="uid://bghl6nhxvt7pg" path="res://torso.gd" id="1_ldi0w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryrav"]
+size = Vector2(504, 209)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_50s6g")
+}],
+"loop": 1,
+"name": &"cori",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="torso" type="Area2D" unique_id=447771115]
+script = ExtResource("1_ldi0w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1328516886]
+position = Vector2(10, 397)
+shape = SubResource("RectangleShape2D_ryrav")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2017051492]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1194855086]
+sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"cori"

@@ -13,8 +13,8 @@ hello herby
 
 the layers are (bottom to top)
 * background
-* torso
-* clothes?
+* torso + clothes on the same
+* extra clothes stuff
 * head
 * hair
 * head accessory

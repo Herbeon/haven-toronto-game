@@ -1,10 +1,57 @@
 [gd_scene format=3 uid="uid://xjdeec8kqs80"]
 
 [ext_resource type="Script" uid="uid://c6w0cgcql5706" path="res://eye.gd" id="1_05vdx"]
+[ext_resource type="Texture2D" uid="uid://b0f2ml6avpiel" path="res://images and character assets/Eye demo 2.png" id="2_1t7xr"]
+[ext_resource type="Texture2D" uid="uid://bfoeypfraed0f" path="res://images and character assets/corieye2.png" id="2_x8diq"]
+[ext_resource type="Texture2D" uid="uid://8axy31lnmauo" path="res://images and character assets/Eye demo.png" id="3_l1n7h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ktypu"]
+radius = 47.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcrup"]
+radius = 15.033297
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fc0e3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x8diq")
+}],
+"loop": 1,
+"name": &"cori",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l1n7h")
+}],
+"loop": 1,
+"name": &"frown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1t7xr")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 4.0
+}]
 
 [node name="eye" type="CharacterBody2D" unique_id=2145566204]
 script = ExtResource("1_05vdx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1753912338]
+shape = SubResource("CircleShape2D_ktypu")
+
+[node name="CollisionShape2Dsmol" type="CollisionShape2D" parent="." unique_id=2117236626]
+shape = SubResource("CircleShape2D_tcrup")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1844115045]
+position = Vector2(-13, 7)
+sprite_frames = SubResource("SpriteFrames_fc0e3")
+animation = &"frown"
+
+[node name="EyeDemo2" type="Sprite2D" parent="." unique_id=1491491838]
+visible = false
+texture = ExtResource("2_1t7xr")
