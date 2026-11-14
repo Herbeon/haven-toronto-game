@@ -36,11 +36,14 @@ func _physics_process(delta):
 		if(Input.is_action_just_pressed("pause") && can_be_paused_now):
 			velocity = Vector2.ZERO
 			done_eye.emit()
-		if(Input.is_action_just_pressed("rotate_clockwise")):
+			can_be_paused_now = false
+			placing_eye = false
+		if(Input.is_action_just_pressed("rotate_clockwise") && placing_eye):
 			print ("rotate clockwise")
 			$AnimatedSprite2D.rotate(PI/6)
-		if(Input.is_action_just_pressed("rotate_ccwise")):
+		if(Input.is_action_just_pressed("rotate_ccwise")&& placing_eye):
 			$AnimatedSprite2D.rotate(-PI/6)
+		
 			
 		var collision = move_and_collide(velocity * delta)
 		# move and collide returns a boolean if it hits something
