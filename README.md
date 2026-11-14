@@ -22,3 +22,5 @@ the layers are (bottom to top)
 * hat (9)
 * face: eyes, mouth (10, 11, 12)
 * decoration? (13, 14)
+
+reloads are available, counted in a total with game script

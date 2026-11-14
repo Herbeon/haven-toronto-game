@@ -4,13 +4,16 @@ extends CharacterBody2D
 signal done_ear
 
 @export var speed = 420
-@export var visual = ["hungri","human","fox"].pick_random() # list of the different ears
+@export var visual = "" # list of the different ears
 
 var placing_ear = false
 var can_be_paused_now = false
 
 
 func start():
+	visual = ["hungri","human","fox"].pick_random()
+	$AnimatedSprite2D.play(visual)
+
 	get_node("CollisionShape2D").disabled = true
 	get_node("CollisionShape2Dbig").disabled = true
 	get_node("CollisionShape2Dsmol").disabled = true
@@ -40,7 +43,6 @@ func start():
 	
 func _ready():
 	velocity = Vector2.ZERO
-	$AnimatedSprite2D.play(visual)
 	# potential for blinking later
 	#$EyeDemo2.material.set_shader_parameter("hihi",0.0)
 #

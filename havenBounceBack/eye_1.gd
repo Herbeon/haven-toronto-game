@@ -4,15 +4,17 @@ extends CharacterBody2D
 signal done_eye
 
 @export var speed = 420
-@export var visual = ["normal","frown","cori","default"].pick_random() # list of the different eyes
+@export var visual = "" # list of the different eyes
 
 var placing_eye = false
 var can_be_paused_now = false
 
 func start():
-	print("eye started")
+	visual = ["normal","frown","cori","default"].pick_random()
+	$AnimatedSprite2D.play(visual)
+	position = Vector2(520,520)
+
 	placing_eye = true
-	position = get_viewport_rect().size / 2
 	
 	var direction_x = randf_range(-0.7,0.7)
 	# yay gambling
@@ -25,7 +27,6 @@ func start():
 	
 func _ready():
 	velocity = Vector2.ZERO
-	$AnimatedSprite2D.play(visual)
 	# potential for blinking later
 	#$EyeDemo2.material.set_shader_parameter("hihi",0.0)
 #
