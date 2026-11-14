@@ -3,8 +3,8 @@ extends CharacterBody2D
 
 signal done_eye
 
-@export var speed = 300
-@export var visual = "normal"
+@export var speed = 400
+@export var visual = ["normal","frowneye"].pick_random() # list of the different eyes
 
 var placing_eye = false
 var can_be_paused_now = false
@@ -25,7 +25,7 @@ func start():
 	
 func _ready():
 	velocity = Vector2.ZERO
-	#$AnimatedSprite2D.play(visual)
+	$AnimatedSprite2D.play(visual)
 	# potential for blinking later
 	#$EyeDemo2.material.set_shader_parameter("hihi",0.0)
 #
@@ -39,8 +39,8 @@ func _physics_process(delta):
 		var collision = move_and_collide(velocity * delta)
 		# move and collide returns a boolean if it hits something
 		if collision:
-			$EyeDemo2.rotate(PI / 2)
-			#$AnimatedSprite2D.rotate(PI/2)
+			#$EyeDemo2.rotate(PI / 2)
+			$AnimatedSprite2D.rotate(PI/2)
 			velocity = velocity.bounce(collision.get_normal())
 
 			var thing_we_hit = collision.get_collider()

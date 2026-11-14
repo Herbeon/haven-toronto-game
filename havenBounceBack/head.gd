@@ -3,13 +3,13 @@ extends CharacterBody2D
 
 signal done_head
 
-@export var speed = 100
+@export var speed = 300
 @export var visual = "default"
 
 var paused = false
 
 func start():
-	position = get_viewport_rect().size / 2
+	position = Vector2(600,600)
 	
 	var direction_x = randf_range(-1,1)
 	# yay gambling
