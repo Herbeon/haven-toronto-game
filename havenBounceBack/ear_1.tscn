@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://crvkgv3gvwurq"]
 
 [ext_resource type="Script" uid="uid://cxbs6xc3pfa80" path="res://ear_1.gd" id="1_kvwlt"]
-[ext_resource type="Texture2D" uid="uid://bc4hoynd7tnmg" path="res://images and character assets/Ear 2L.png" id="2_j27og"]
-[ext_resource type="Texture2D" uid="uid://dytu8a8denh4m" path="res://images and character assets/Ear 3L.PNG" id="4_qm4j1"]
+[ext_resource type="Texture2D" uid="uid://cu2wtp3lclhvu" path="res://images and character assets/Ear 2L.PNG" id="2_j27og"]
+[ext_resource type="Texture2D" uid="uid://cg550igdmb4up" path="res://images and character assets/Ear 1L.PNG" id="3_hvwuq"]
+[ext_resource type="Texture2D" uid="uid://dnyuldr7g1u2b" path="res://images and character assets/Ear 3L.PNG" id="4_qm4j1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ktypu"]
 radius = 74.24284
@@ -24,7 +25,10 @@ animations = [{
 "name": &"fox",
 "speed": 4.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hvwuq")
+}],
 "loop": 1,
 "name": &"human",
 "speed": 5.0

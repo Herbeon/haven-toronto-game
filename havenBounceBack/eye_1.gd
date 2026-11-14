@@ -41,7 +41,7 @@ func _physics_process(delta):
 		if(Input.is_action_just_pressed("rotate_clockwise") && placing_eye):
 			print ("rotate clockwise")
 			$AnimatedSprite2D.rotate(PI/6)
-		if(Input.is_action_just_pressed("rotate_ccwise")&& placing_eye):
+		if(Input.is_action_just_pressed("rotate_ccwise")):
 			$AnimatedSprite2D.rotate(-PI/6)
 		
 			
