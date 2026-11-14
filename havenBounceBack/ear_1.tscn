@@ -11,8 +11,8 @@ radius = 74.24284
 radius = 30.265491
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcrup"]
-radius = 115.0
-height = 472.0
+radius = 83.2396
+height = 441.93683
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fc0e3"]
 animations = [{
@@ -50,7 +50,8 @@ shape = SubResource("CircleShape2D_ktypu")
 shape = SubResource("CircleShape2D_tcrup")
 
 [node name="CollisionShape2Dbig" type="CollisionShape2D" parent="." unique_id=1087312930]
-position = Vector2(-2, -13)
+position = Vector2(-2, -3)
+rotation = 0.38397244
 shape = SubResource("CapsuleShape2D_tcrup")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1844115045]

@@ -18,10 +18,10 @@ func start():
 	if(visual == "hungri"):
 		get_node("CollisionShape2Dbig").disabled = false
 	if(visual == "human"):
-		print("human")
+		#print("human")
 		get_node("CollisionShape2Dsmol").disabled = false
 	if(visual == "fox"):
-		print("fox")
+		#print("fox")
 		get_node("CollisionShape2D").disabled = false
 
 
