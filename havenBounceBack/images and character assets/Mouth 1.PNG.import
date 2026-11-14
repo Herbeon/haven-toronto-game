@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnxnmgdef4eqt"
-path="res://.godot/imported/Torso 1.PNG-101916eaa9d63fb0f5da0d9fee48d279.ctex"
+uid="uid://btx1pwqyco102"
+path="res://.godot/imported/Mouth 1.PNG-d2dc49191f29d626aab9d2a0f547ed81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/norah uncut/Torso 1.PNG"
-dest_files=["res://.godot/imported/Torso 1.PNG-101916eaa9d63fb0f5da0d9fee48d279.ctex"]
+source_file="res://images and character assets/Mouth 1.PNG"
+dest_files=["res://.godot/imported/Mouth 1.PNG-d2dc49191f29d626aab9d2a0f547ed81.ctex"]
 
 [params]
 

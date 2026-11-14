@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c55cimnlkt2ak"
-path="res://.godot/imported/Brow 3L.PNG-f1f9194b7a6646c90c4d3026e0aade08.ctex"
+uid="uid://bnolg37nhrqp4"
+path="res://.godot/imported/Nose 1.PNG-c3184e4bb56cde6560d2e1052d2ad1f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/norah uncut/Brow 3L.PNG"
-dest_files=["res://.godot/imported/Brow 3L.PNG-f1f9194b7a6646c90c4d3026e0aade08.ctex"]
+source_file="res://images and character assets/Nose 1.PNG"
+dest_files=["res://.godot/imported/Nose 1.PNG-c3184e4bb56cde6560d2e1052d2ad1f7.ctex"]
 
 [params]
 

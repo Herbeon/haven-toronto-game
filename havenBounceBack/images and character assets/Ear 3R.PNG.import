@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://emy3mj16yc2x"
-path="res://.godot/imported/Ear 1L.PNG-08397c9d35dd1e41f676124cd1613f0a.ctex"
+uid="uid://b3qs1fo25utut"
+path="res://.godot/imported/Ear 3R.PNG-25b2fa0ff4b81dbc3e00fb37b4e0831a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/norah uncut/Ear 1L.PNG"
-dest_files=["res://.godot/imported/Ear 1L.PNG-08397c9d35dd1e41f676124cd1613f0a.ctex"]
+source_file="res://images and character assets/Ear 3R.PNG"
+dest_files=["res://.godot/imported/Ear 3R.PNG-25b2fa0ff4b81dbc3e00fb37b4e0831a.ctex"]
 
 [params]
 

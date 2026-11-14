@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u6cwfy1rkqch"
-path="res://.godot/imported/Brow 1R.PNG-ecaa15be0c1d268fa0ea232a1dc4953e.ctex"
+uid="uid://4ey7tebv25qt"
+path="res://.godot/imported/Horn 1R.PNG-1f13491e6642a58a4fac49c990894796.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/norah uncut/Brow 1R.PNG"
-dest_files=["res://.godot/imported/Brow 1R.PNG-ecaa15be0c1d268fa0ea232a1dc4953e.ctex"]
+source_file="res://images and character assets/Horn 1R.PNG"
+dest_files=["res://.godot/imported/Horn 1R.PNG-1f13491e6642a58a4fac49c990894796.ctex"]
 
 [params]
 

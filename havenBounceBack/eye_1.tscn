@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bq50pp73rmymu" path="res://eye_1.gd" id="1_ln44f"]
 [ext_resource type="Texture2D" uid="uid://jmn8jrk8anq8" path="res://images and character assets/corieye1.png" id="2_m6jhr"]
-[ext_resource type="Texture2D" uid="uid://btfj4o7k6fgkw" path="res://images and character assets/norah uncut/Eye 1L.PNG" id="3_fmipp"]
+[ext_resource type="Texture2D" uid="uid://2nvr4vx77eye" path="res://images and character assets/Eye 1L.PNG" id="3_fmipp"]
 [ext_resource type="Texture2D" uid="uid://8axy31lnmauo" path="res://images and character assets/demo/Eye demo.png" id="4_m6jhr"]
 [ext_resource type="Texture2D" uid="uid://b0f2ml6avpiel" path="res://images and character assets/demo/Eye demo 2.png" id="5_fmipp"]
 
@@ -55,4 +55,3 @@ shape = SubResource("CircleShape2D_ln44f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=45060400]
 position = Vector2(-2, 1)
 sprite_frames = SubResource("SpriteFrames_tcrup")
-animation = &"frown"

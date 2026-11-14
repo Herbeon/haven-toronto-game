@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu2wtp3lclhvu"
-path="res://.godot/imported/Ear 2L.PNG-bc26588092a6c2cb5e85374c9b0d125d.ctex"
+path="res://.godot/imported/Ear 2L.PNG-ac627709ccfac46aeabc258feaa53526.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/norah uncut/Ear 2L.PNG"
-dest_files=["res://.godot/imported/Ear 2L.PNG-bc26588092a6c2cb5e85374c9b0d125d.ctex"]
+source_file="res://images and character assets/Ear 2L.PNG"
+dest_files=["res://.godot/imported/Ear 2L.PNG-ac627709ccfac46aeabc258feaa53526.ctex"]
 
 [params]
 
