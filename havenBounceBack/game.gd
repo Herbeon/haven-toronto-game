@@ -17,6 +17,7 @@ extends Node2D
 @onready var eye1 = $eye1
 @onready var ear1 = $ear1
 @onready var ear2 = $ear2
+@onready var mouth = $mouth
 
 @onready var label = $Control/Label
 @onready var relabel = $Control/Relabel
@@ -61,17 +62,22 @@ func head_is_done():
 	#print("start 1 eye")
 
 func eye_is_done():
-	label.text = "Currently placing ear"
+	label.text = "Currently placing first ear"
 	current_part = $ear1
 
 	ear1.start()
 
 
 func ear_is_done():
+	label.text = "Currently placing second ear"
+
 	current_part = $ear2
 
 	ear2.start()
 	
 func ear_2_is_done():
-	print("hello ear 2 done")
+	label.text = "Currently placing mouth"
+
+	current_part = $mouth
+	mouth.start()
 	
