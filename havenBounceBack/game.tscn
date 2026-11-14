@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://6eodjt2bm565" path="res://backgrounds/green bg.png" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://xjdeec8kqs80" path="res://eye.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://djicpc76ou862" path="res://head.tscn" id="4_7jktm"]
+[ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc0e3"]
 texture = ExtResource("1_e2o6t")
@@ -54,10 +55,16 @@ offset_bottom = 1046.0
 texture = ExtResource("2_feb5d")
 metadata/_edit_lock_ = true
 
+[node name="torso" parent="." unique_id=447771115 instance=ExtResource("4_ryrav")]
+z_index = 1
+position = Vector2(548, 533)
+
 [node name="head" parent="." unique_id=1583071804 instance=ExtResource("4_7jktm")]
+z_index = 5
 position = Vector2(-287, 198)
 
 [node name="eye" parent="." unique_id=2145566204 instance=ExtResource("3_feb5d")]
+z_index = 10
 position = Vector2(-229, 495)
 collision_layer = 2
 collision_mask = 2

@@ -3,8 +3,8 @@ extends CharacterBody2D
 
 signal done_eye
 
-@export var speed = 400
-@export var visual = ["normal","frowneye"].pick_random() # list of the different eyes
+@export var speed = 600
+@export var visual = ["normal","frown","cori"].pick_random() # list of the different eyes
 
 var placing_eye = false
 var can_be_paused_now = false
@@ -43,7 +43,6 @@ func _physics_process(delta):
 			$AnimatedSprite2D.rotate(PI/2)
 			velocity = velocity.bounce(collision.get_normal())
 
-			var thing_we_hit = collision.get_collider()
 			print(velocity)
 			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
 				velocity *= 1.1

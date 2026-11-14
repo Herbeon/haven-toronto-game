@@ -11,6 +11,8 @@ extends Node2D
 #* face: eyes, mouth
 #* decoration?
 
+@onready var torso = $torso
+
 @onready var head = $head
 @onready var eye1 = $eye
 
@@ -20,12 +22,14 @@ extends Node2D
 func _ready() -> void:
 	eye1.done_eye.connect(eye_is_done)
 	head.done_head.connect(head_is_done)
+	
 	new_game()
 
 
 func new_game():
 	# a new game. do stuff
 	# skip to eye part
+	torso.start()
 	head.start()
 	label.text = "Currently placing head"
 	

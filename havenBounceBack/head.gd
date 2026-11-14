@@ -9,12 +9,12 @@ signal done_head
 var paused = false
 
 func start():
-	position = Vector2(600,600)
+	position = Vector2(530,200)
 	
-	var direction_x = randf_range(-1,1)
+	var direction_x = 0
 	# yay gambling
 	
-	var direction_y = randf_range(-1,1)
+	var direction_y = 1
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
