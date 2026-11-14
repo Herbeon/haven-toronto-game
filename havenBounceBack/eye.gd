@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 signal done_eye
 
-@export var speed = 600
+@export var speed = 420
 @export var visual = ["normal","frown","cori"].pick_random() # list of the different eyes
 
 var placing_eye = false
@@ -17,7 +17,7 @@ func start():
 	var direction_x = randf_range(-0.7,0.7)
 	# yay gambling
 	
-	var direction_y = randf_range(-0.6,0.6)
+	var direction_y = randf_range(-0.5,0.5)
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
@@ -36,6 +36,11 @@ func _physics_process(delta):
 		if(Input.is_action_just_pressed("pause") && can_be_paused_now):
 			velocity = Vector2.ZERO
 			done_eye.emit()
+		if(Input.is_action_just_pressed("rotate_clockwise")):
+			$AnimatedSprite2D.rotate(PI/6)
+		if(Input.is_action_just_pressed("rotate_ccwise")):
+			$AnimatedSprite2D.rotate(-PI/6)
+			
 		var collision = move_and_collide(velocity * delta)
 		# move and collide returns a boolean if it hits something
 		if collision:
