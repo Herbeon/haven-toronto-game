@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cieebwyrgglhd"
-path="res://.godot/imported/Mouth 1.PNG-d2dc49191f29d626aab9d2a0f547ed81.ctex"
+uid="uid://esr3vartapgh"
+path="res://.godot/imported/Horn 1R.PNG-87e9b1a2e5cf44cb0b458becb8a65917.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/Mouth 1.PNG"
-dest_files=["res://.godot/imported/Mouth 1.PNG-d2dc49191f29d626aab9d2a0f547ed81.ctex"]
+source_file="res://images and character assets/norah uncut/Horn 1R.PNG"
+dest_files=["res://.godot/imported/Horn 1R.PNG-87e9b1a2e5cf44cb0b458becb8a65917.ctex"]
 
 [params]
 

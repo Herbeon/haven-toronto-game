@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn8r4ua743qe3"
-path="res://.godot/imported/Torso 1.PNG-33932f509112150fdc1b3f842662d0be.ctex"
+uid="uid://djcbltdjd5t7j"
+path="res://.godot/imported/Horn 1L.PNG-cad6fa2731d42e99b19971df8b0aadc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/Torso 1.PNG"
-dest_files=["res://.godot/imported/Torso 1.PNG-33932f509112150fdc1b3f842662d0be.ctex"]
+source_file="res://images and character assets/norah uncut/Horn 1L.PNG"
+dest_files=["res://.godot/imported/Horn 1L.PNG-cad6fa2731d42e99b19971df8b0aadc1.ctex"]
 
 [params]
 

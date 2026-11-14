@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckxhwa75qxd53"
-path="res://.godot/imported/Ear 1R.PNG-fe41de4f1caa9197d363896c1bb59ecf.ctex"
+uid="uid://dnxnmgdef4eqt"
+path="res://.godot/imported/Torso 1.PNG-101916eaa9d63fb0f5da0d9fee48d279.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/Ear 1R.PNG"
-dest_files=["res://.godot/imported/Ear 1R.PNG-fe41de4f1caa9197d363896c1bb59ecf.ctex"]
+source_file="res://images and character assets/norah uncut/Torso 1.PNG"
+dest_files=["res://.godot/imported/Torso 1.PNG-101916eaa9d63fb0f5da0d9fee48d279.ctex"]
 
 [params]
 

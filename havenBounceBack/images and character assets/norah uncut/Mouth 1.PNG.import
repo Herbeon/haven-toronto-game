@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd6qlj6a66upe"
-path="res://.godot/imported/Nose 1.PNG-c3184e4bb56cde6560d2e1052d2ad1f7.ctex"
+uid="uid://42hwn3fr14ju"
+path="res://.godot/imported/Mouth 1.PNG-6c5f918a02a662f59987bb114e74071b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/Nose 1.PNG"
-dest_files=["res://.godot/imported/Nose 1.PNG-c3184e4bb56cde6560d2e1052d2ad1f7.ctex"]
+source_file="res://images and character assets/norah uncut/Mouth 1.PNG"
+dest_files=["res://.godot/imported/Mouth 1.PNG-6c5f918a02a662f59987bb114e74071b.ctex"]
 
 [params]
 

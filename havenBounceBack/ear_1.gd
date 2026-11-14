@@ -29,7 +29,7 @@ func start():
 	placing_ear = true
 	position = get_viewport_rect().size / 2
 	
-	var direction_x = randf_range(-0.7,0.7)
+	var direction_x = randf_range(-1,1)
 	# yay gambling
 	
 	var direction_y = randf_range(-0.5,0.5)
@@ -51,9 +51,11 @@ func _physics_process(delta):
 		if(Input.is_action_just_pressed("pause") && can_be_paused_now):
 			velocity = Vector2.ZERO
 			done_ear.emit()
-		if(Input.is_action_just_pressed("rotate_clockwise")):
+			can_be_paused_now = false
+			placing_ear = false
+		if(Input.is_action_just_pressed("rotate_clockwise")&& placing_ear):
 			$AnimatedSprite2D.rotate(PI/6)
-		if(Input.is_action_just_pressed("rotate_ccwise")):
+		if(Input.is_action_just_pressed("rotate_ccwise")&& placing_ear):
 			$AnimatedSprite2D.rotate(-PI/6)
 			
 		var collision = move_and_collide(velocity * delta)
@@ -62,9 +64,10 @@ func _physics_process(delta):
 			var tween = create_tween()
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1,1), 0.1)
-			$AnimatedSprite2D.rotate(PI/2)
-			if(visual == "hungri"):
-				$CollisionShape2Dbig.rotate(PI/2)
+			if(visual != "hungri"):
+				$AnimatedSprite2D.rotate(PI/2)
+
+				#$CollisionShape2Dbig.rotate(PI/2)
 			velocity = velocity.bounce(collision.get_normal())
 
 			#print(velocity)
