@@ -1,5 +1,5 @@
 # haven toronto game: meet the new you
-welcome to the zen haven of *incurby* - clients seek to rebound from their struggles and it is your job to help reshape them.
+We welcome you, apprentice, to the zen haven of *Incurby*! Those who look to bounce back from their struggles require your reshaping services. Build them a new, exquisite self.
 
 # screenshots
 
@@ -14,8 +14,10 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 * 100% human-made, no AI was used
 
 # features
-* cool title screen and art
-* rotatable accessories
+* animated title screen and art
+* bouncy, rotatable, and reloadable assets
+* live random Incurby reactions
+* serene waterfall audio x bleep bloop yippie audio
 * tons of chances to gamble!
 
 # godot crash counter
@@ -29,13 +31,8 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 * write readme
 * design make itch thumbnail
 * write itch description
-* decoration art
-* cover art
-* polish
 
-
-# our ramble planning below
-
+# read our planning below!
 the layers are (bottom to top) (z indices)
 * background (0)
 * bottom hair (1)
@@ -64,5 +61,3 @@ collision layers:
 * 8: hat
 * 9: face things: eyes, mouth, nose, eyebrows
 * 10: decoration
-
-made by incurableregrets and herbeon - incurby
