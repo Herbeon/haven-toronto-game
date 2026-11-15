@@ -1,15 +1,19 @@
 extends Node2D
 #
-#the layers are (bottom to top)
-#* background
-#* torso
-#* clothes?
-#* head
-#* hair
-#* head accessory
-#* hat
-#* face: eyes, mouth
-#* decoration?
+
+#insertion order:
+#body (preset)
+#head
+#ears
+#nose 
+#mouth
+#eyes
+#brows
+#bangs
+#hair
+#clothes accessory
+#accessory
+#hat
 
 @onready var torso = $torso
 

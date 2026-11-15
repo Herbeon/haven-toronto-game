@@ -11,17 +11,21 @@ boop
 
 hello herby
 
-the layers are (bottom to top)
+the layers are (bottom to top) (z indices)
 * background (0)
-* torso + clothes on the same (1)
-* extra clothes stuff (2)
+* bottom hair (1)
+* torso + clothes on the same (2)
 * head (3)
-* ear (4, 5)
-* hair (6, 7)
-* head accessory (8)
-* hat (9)
-* face: eyes, mouth (20, 21, 22)
-* decoration? (33, 34)
+* ear (5,6)
+* nose (10)
+* mouth (11)
+* clothing accessory (15)
+* hair bangs (16)
+* eyes (20, 21)
+* eyebrows (22, 23)
+* accessory (horns and stuff) (25, 26)
+* hat (27)
+* decoration? (30, 31)
 
 collision layers:
 * walls are every layer
