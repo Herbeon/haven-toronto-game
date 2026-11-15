@@ -31,8 +31,9 @@ hello herby
 * write readme
 * design make itch thumbnail
 * write itch description
-* draw the herby and incurable sprites
-* decoration
+* decoration art
+* cover art
+* polish
 
 the layers are (bottom to top) (z indices)
 * background (0)
