@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b36r0eu3001e3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+
+[node name="decor" type="CharacterBody2D" unique_id=1370012639]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2063181223]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=244288109]
+sprite_frames = SubResource("SpriteFrames_tcrup")
