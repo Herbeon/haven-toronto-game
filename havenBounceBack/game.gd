@@ -36,6 +36,9 @@ extends Node2D
 
 @onready var hat = $hat
 
+@onready var decor1 = $decor1
+@onready var decor2 = $decor2
+
 @onready var label = $Control/Label
 @onready var relabel = $Control/Relabel
 
@@ -44,13 +47,33 @@ var complete_pic = false
 @onready var current_part = $torso
 
 @onready var bg_music = $AudioStreamPlayer
+
+#@onready var boing1 = $Audioboing1
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	bg_music.autoplay = true
 	#load("res://audio/ambientwaterfall.wav")
-
 	$title_screen.game_started.connect(title_screen_clicked)
 	eye1.done_eye.connect(eye1_is_done)
+	
+	eye1.collided.connect(collisionhappened)
+	eyebrow1.collided.connect(collisionhappened)
+	eyebrow2.collided.connect(collisionhappened)
+
+	eye2.collided.connect(collisionhappened)
+	ear1.collided.connect(collisionhappened)
+	ear2.collided.connect(collisionhappened)
+	hairback.collided.connect(collisionhappened)
+	hairfront.collided.connect(collisionhappened)
+	mouth.collided.connect(collisionhappened)
+	hat.collided.connect(collisionhappened)
+	head.collided.connect(collisionhappened)
+	headacc1.collided.connect(collisionhappened)
+	headacc2.collided.connect(collisionhappened)
+	decor1.collided.connect(collisionhappened)
+	decor2.collided.connect(collisionhappened)
+
 	eye2.done_eye2.connect(eye2_is_done)
 	hairback.done_hairback.connect(hairback_is_done)
 	hairfront.done_hairfront.connect(hairfront_is_done)
@@ -66,6 +89,9 @@ func _ready() -> void:
 
 	eyebrow1.done_eb1.connect(eyebrow1_is_done)
 	eyebrow2.done_eb2.connect(eyebrow2_is_done)
+	
+	decor1.done_decor1.connect(decor1_is_done)
+	decor2.done_decor2.connect(decor2_is_done)
 	
 	hat.done_hat.connect(hat_is_done)
 	#new_game()
@@ -86,7 +112,13 @@ func _process(float) -> void:
 		current_part.got_paused()
 	#if(Input.is_action_just_pressed("newgame")):
 		#new_game()
-		
+
+func collisionhappened():
+	var toplay = [$Audioboing1,$Audioboing2,$Audioboing3].pick_random()
+	while(toplay.playing):
+		toplay = [$Audioboing1,$Audioboing2,$Audioboing3].pick_random()
+	toplay.play()
+	
 func title_screen_clicked():
 	new_game()
 
@@ -180,6 +212,15 @@ func headacc2_is_done():
 	hat.start()
 	
 func hat_is_done():
-	label.text = "Currently should be placing stuff"
+	label.text = "Currently placing decor 1"
+	current_part = $decor1
 	
+	decor1.start()
+
+func decor1_is_done():
+	label.text = "Currently placing decor 2"
+	current_part = $decor2 
+	decor2.start()
+func decor2_is_done():
+	label.text = "done!"
 	
