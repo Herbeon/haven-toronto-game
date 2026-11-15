@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://2t6deka3n40o" path="res://eye_2.tscn" id="15_80cx4"]
 [ext_resource type="PackedScene" uid="uid://dol4sbitss48s" path="res://hairback.tscn" id="18_rvswv"]
 [ext_resource type="PackedScene" uid="uid://d1q0nlvaggd2k" path="res://hairfront.tscn" id="19_boyg6"]
+[ext_resource type="PackedScene" uid="uid://c1faffmk11exl" path="res://eyebrow_1.tscn" id="20_hb5m1"]
+[ext_resource type="PackedScene" uid="uid://i0nxfc51dnfi" path="res://eyebrow_2.tscn" id="21_x5p1p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -150,7 +152,7 @@ collision_mask = 8
 
 [node name="ear2" parent="." unique_id=1415512742 instance=ExtResource("7_vef74")]
 z_index = 6
-position = Vector2(-604, 295)
+position = Vector2(-678, 394)
 collision_layer = 8
 collision_mask = 8
 
@@ -162,7 +164,7 @@ collision_mask = 256
 
 [node name="eye2" parent="." unique_id=601769691 instance=ExtResource("15_80cx4")]
 z_index = 21
-position = Vector2(-198, -249)
+position = Vector2(-293, -167)
 collision_layer = 256
 collision_mask = 256
 
@@ -181,6 +183,18 @@ z_index = 16
 position = Vector2(-930, 660)
 collision_layer = 16
 collision_mask = 16
+
+[node name="eyebrow1" parent="." unique_id=1964173345 instance=ExtResource("20_hb5m1")]
+z_index = 22
+position = Vector2(-1355, 1205)
+collision_layer = 256
+collision_mask = 256
+
+[node name="eyebrow2" parent="." unique_id=1231311420 instance=ExtResource("21_x5p1p")]
+z_index = 23
+position = Vector2(-1035, 1125)
+collision_layer = 256
+collision_mask = 256
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890427670]
 z_index = -10

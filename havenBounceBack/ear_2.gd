@@ -30,7 +30,7 @@ func start():
 
 
 	placing_ear = true
-	position = get_viewport_rect().size / 2
+	position = Vector2(520,520)
 	
 	var direction_x = randf_range(-1,1)
 	# yay gambling
@@ -51,10 +51,7 @@ func _ready():
 func _physics_process(delta):
 	if(placing_ear):
 		if(Input.is_action_just_pressed("pause") && can_be_paused_now):
-			velocity = Vector2.ZERO
-			done_ear.emit()
-			can_be_paused_now = false
-			placing_ear = false
+			got_paused()
 		if(Input.is_action_just_pressed("rotate_clockwise")&& placing_ear):
 			$AnimatedSprite2D.rotate(PI/6)
 		if(Input.is_action_just_pressed("rotate_ccwise")&& placing_ear):
@@ -76,3 +73,9 @@ func _physics_process(delta):
 			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
 				velocity *= 1.1
 		can_be_paused_now = true
+
+func got_paused():
+	velocity = Vector2.ZERO
+	done_ear.emit()
+	can_be_paused_now = false
+	placing_ear = false

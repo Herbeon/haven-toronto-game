@@ -25,9 +25,8 @@ func _ready():
 
 func _physics_process(delta):
 	if(Input.is_action_just_pressed("pause") && !paused):
-		velocity = Vector2.ZERO
-		paused = true
-		done_head.emit()
+		got_paused()
+
 	if(Input.is_action_just_pressed("rotate_clockwise") && !paused):
 		position.x += 10
 	if(Input.is_action_just_pressed("rotate_ccwise") && !paused):
@@ -40,10 +39,14 @@ func _physics_process(delta):
 			var tween = create_tween()
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1,1), 0.1)
-			$AnimatedSprite2D.rotate(PI / 2)
+			$AnimatedSprite2D.rotate(PI / 12)
 			velocity = velocity.bounce(collision.get_normal())
 
 			var thing_we_hit = collision.get_collider()
 			#print(velocity)
 			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
 				velocity *= 1.1
+func got_paused():
+	velocity = Vector2.ZERO
+	paused = true
+	done_head.emit()
