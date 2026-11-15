@@ -13,7 +13,7 @@ extends Node2D
 
 #bangs
 #clothes accessory
-#accessory
+#accessories on head
 #hat
 
 @onready var torso = $torso

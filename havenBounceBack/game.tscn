@@ -91,13 +91,14 @@ offset_bottom = 1040.0
 texture = ExtResource("3_ryrav")
 
 [node name="controls explained" type="TextureRect" parent="." unique_id=1816787531]
-offset_left = 1136.0
-offset_top = 421.0
-offset_right = 1865.3333
-offset_bottom = 968.0
+offset_left = 1069.0
+offset_top = 532.0
+offset_right = 1798.3333
+offset_bottom = 1079.0
 texture = ExtResource("5_x5p1p")
 expand_mode = 1
 script = ExtResource("5_7sc4i")
+metadata/_edit_group_ = true
 
 [node name="space" type="TextureRect" parent="controls explained" unique_id=646424990]
 layout_mode = 0
