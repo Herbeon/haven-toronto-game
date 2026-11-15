@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://8nsp8p2gk6tv" path="res://clothesacc.tscn" id="23_qhcbd"]
 [ext_resource type="PackedScene" uid="uid://juk7rd5qsq8b" path="res://headacc_1.tscn" id="24_vaj68"]
 [ext_resource type="PackedScene" uid="uid://b8tgl53jjj4s6" path="res://headacc_2.tscn" id="25_i2p71"]
+[ext_resource type="PackedScene" uid="uid://bhbqukfheabro" path="res://hat.tscn" id="29_bnpwn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -263,6 +264,12 @@ z_index = 27
 position = Vector2(-382, 1790)
 collision_layer = 64
 collision_mask = 64
+
+[node name="hat" parent="." unique_id=402993914 instance=ExtResource("29_bnpwn")]
+z_index = 28
+position = Vector2(-4, 1527)
+collision_layer = 128
+collision_mask = 128
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890427670]
 z_index = -10

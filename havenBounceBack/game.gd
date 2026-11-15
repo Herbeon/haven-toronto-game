@@ -35,6 +35,8 @@ extends Node2D
 @onready var headacc1 = $headacc1
 @onready var headacc2 = $headacc2
 
+@onready var hat = $hat
+
 @onready var label = $Control/Label
 @onready var relabel = $Control/Relabel
 
@@ -60,6 +62,8 @@ func _ready() -> void:
 
 	eyebrow1.done_eb1.connect(eyebrow1_is_done)
 	eyebrow2.done_eb2.connect(eyebrow2_is_done)
+	
+	hat.done_hat.connect(hat_is_done)
 	new_game()
 
 func _process(float) -> void:
@@ -159,5 +163,12 @@ func headacc1_is_done():
 	headacc2.start()
 
 func headacc2_is_done():
-	label.text = "Currently placing:\nsomething"
+	label.text = "Currently placing:\nhat"
+	current_part = $hat
+	
+	hat.start()
+	
+func hat_is_done():
+	label.text = "Currently should\nbe placing stuff"
+	
 	

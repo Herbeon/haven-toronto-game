@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bhbqukfheabro"]
+
+[ext_resource type="Script" uid="uid://c5ptpmuee40ua" path="res://hat.gd" id="1_76kgg"]
+[ext_resource type="Texture2D" uid="uid://bxw22gxqfaenj" path="res://images and character assets/Hat 3.PNG" id="1_pkhb4"]
+[ext_resource type="Texture2D" uid="uid://co4ii3ivq1gbe" path="res://images and character assets/Hat 2.PNG" id="2_76kgg"]
+[ext_resource type="Texture2D" uid="uid://ldwjanwtjp48" path="res://images and character assets/Hat 1.PNG" id="3_e2cuu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcrup"]
+size = Vector2(285, 196.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3p08f"]
+radius = 98.02041
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pkhb4")
+}],
+"loop": 1,
+"name": &"party",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_76kgg")
+}],
+"loop": 1,
+"name": &"propeller",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e2cuu")
+}],
+"loop": 1,
+"name": &"top",
+"speed": 5.0
+}]
+
+[node name="hat" type="CharacterBody2D" unique_id=402993914]
+script = ExtResource("1_76kgg")
+
+[node name="CollisionShape2Dbig" type="CollisionShape2D" parent="." unique_id=882128235]
+position = Vector2(48, 29)
+shape = SubResource("RectangleShape2D_tcrup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=255659237]
+position = Vector2(11, 27)
+shape = SubResource("CircleShape2D_3p08f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1222159405]
+sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"party"
