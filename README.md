@@ -29,11 +29,6 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 * more customization options
 * normal version where the objects are actually aligned lol
 
-# todo
-* write readme
-* design make itch thumbnail
-* write itch description
-
 # read our planning below!
 the layers are (bottom to top) (z indices)
 * background (0)
