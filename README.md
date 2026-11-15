@@ -1,9 +1,21 @@
 # haven-toronto-game
-our game for haven yay
+our game for haven yay. 
 
+# screenshots
+
+# how to play
+go to the itch.io page to play. controls are listed in game (keyboard required)
+
+# tools used
+* made with godot
+* art on procreate and krita
+* 100% human-made, no AI was used
+
+# features
+* insert number of possibilities here
 
 # godot crash counter
-* 2
+* herby: 2
 
 beep bop
 
@@ -14,6 +26,13 @@ owo
 boop
 
 hello herby
+
+# todo
+* write readme
+* design make itch thumbnail
+* write itch description
+* draw the herby and incurable sprites
+* decoration
 
 the layers are (bottom to top) (z indices)
 * background (0)

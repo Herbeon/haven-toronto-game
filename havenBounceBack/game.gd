@@ -9,8 +9,9 @@ extends Node2D
 #mouth
 #eyes
 #brows
+#hairback
+
 #bangs
-#hair
 #clothes accessory
 #accessory
 #hat
@@ -20,10 +21,11 @@ extends Node2D
 @onready var head = $head
 @onready var eye1 = $eye1
 @onready var eye2 = $eye2
-
+@onready var hairback = $hairback
 @onready var ear1 = $ear1
 @onready var ear2 = $ear2
 @onready var mouth = $mouth
+
 
 @onready var label = $Control/Label
 @onready var relabel = $Control/Relabel
@@ -36,10 +38,11 @@ var reloads_left = 50
 func _ready() -> void:
 	eye1.done_eye.connect(eye_is_done)
 	eye2.done_eye2.connect(eye2_is_done)
-
+	hairback.done_hairback.connect(hairback_is_done)
 	head.done_head.connect(head_is_done)
 	ear1.done_ear.connect(ear_is_done)
 	ear2.done_ear.connect(ear_2_is_done)
+	mouth.done_mouth.connect(mouth_is_done)
 	new_game()
 
 func _process(float) -> void:
@@ -69,6 +72,7 @@ func head_is_done():
 	eye1.start()
 	#print("start 1 eye")
 
+
 func eye_is_done():
 	label.text = "Currently placing second eye"
 	current_part = $eye2
@@ -94,3 +98,11 @@ func ear_2_is_done():
 	current_part = $mouth
 	mouth.start()
 	
+func mouth_is_done():
+	label.text = "Currently placing back of hair"
+	
+	current_part = $hairback
+	hairback.start()
+	
+func hairback_is_done():
+	label.text = "Currently placing something I guess"

@@ -29,9 +29,9 @@ func _physics_process(delta):
 		paused = true
 		done_head.emit()
 	if(Input.is_action_just_pressed("rotate_clockwise") && !paused):
-		$AnimatedSprite2D.move_local_x(10)
+		position.x += 10
 	if(Input.is_action_just_pressed("rotate_ccwise") && !paused):
-		$AnimatedSprite2D.move_local_x(-10)
+		position.x -= 10
 		
 	if(!paused):
 		var collision = move_and_collide(velocity * delta)

@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dol4sbitss48s"]
+
+[ext_resource type="Script" uid="uid://bfrndjckbfo6c" path="res://hairback.gd" id="1_1v1ys"]
+[ext_resource type="Texture2D" uid="uid://dympws0rvwpgu" path="res://images and character assets/Hair 1 D.PNG" id="1_4g1gd"]
+[ext_resource type="Texture2D" uid="uid://cab0lmbu6wr5" path="res://images and character assets/Hair 1 L.PNG" id="2_1v1ys"]
+[ext_resource type="Texture2D" uid="uid://c5uwitcehqvlv" path="res://images and character assets/Hair 1 M.PNG" id="3_6x625"]
+[ext_resource type="Texture2D" uid="uid://daggin8aox2pg" path="res://images and character assets/Hair 3 D.PNG" id="4_6eo1f"]
+[ext_resource type="Texture2D" uid="uid://d2t6ftl48857r" path="res://images and character assets/Hair 3 L.PNG" id="5_byvys"]
+[ext_resource type="Texture2D" uid="uid://bucungen1dx25" path="res://images and character assets/Hair 3 M.PNG" id="6_my3so"]
+[ext_resource type="Texture2D" uid="uid://uepp45wvenv0" path="res://images and character assets/Hair 2 D.PNG" id="7_8apyt"]
+[ext_resource type="Texture2D" uid="uid://dwxuagy0pqbkq" path="res://images and character assets/Hair 2 L.PNG" id="8_ofjdr"]
+[ext_resource type="Texture2D" uid="uid://dodkv68u5p60c" path="res://images and character assets/Hair 2 M.PNG" id="9_41mhd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3p08f"]
+radius = 209.0
+height = 650.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3p08f"]
+radius = 201.00995
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4g1gd")
+}],
+"loop": 1,
+"name": &"grass1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1v1ys")
+}],
+"loop": 1,
+"name": &"grass2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6x625")
+}],
+"loop": 1,
+"name": &"grass3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6eo1f")
+}],
+"loop": 1,
+"name": &"shrub1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_byvys")
+}],
+"loop": 1,
+"name": &"shrub2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_my3so")
+}],
+"loop": 1,
+"name": &"shrub3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8apyt")
+}],
+"loop": 1,
+"name": &"wisp1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ofjdr")
+}],
+"loop": 1,
+"name": &"wisp2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_41mhd")
+}],
+"loop": 1,
+"name": &"wisp3",
+"speed": 5.0
+}]
+
+[node name="hairback" type="CharacterBody2D" unique_id=47123858]
+script = ExtResource("1_1v1ys")
+
+[node name="CollisionShape2Dbig" type="CollisionShape2D" parent="." unique_id=827065881]
+position = Vector2(15, 0)
+shape = SubResource("CapsuleShape2D_3p08f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=662685400]
+position = Vector2(15, 0)
+shape = SubResource("CircleShape2D_3p08f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1784157569]
+sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"wisp1"
