@@ -2,7 +2,9 @@
 We welcome you, apprentice, to the zen haven of *Incurby*! Those who look to bounce back from their struggles require your reshaping services. Build them a new, exquisite self.
 
 # screenshots
-![demo](screenshot 1.png)
+![title screen, eyes blink](screenshot1.png)
+![in-game, placing an antler with no more reloads left. incurby is sad](screenshot2.png)
+![game end with title and note to screenshot, incurby happy](screenshot3.png)
 
 # how to play
 go to the itch.io page to play. controls are listed in game (keyboard required)
