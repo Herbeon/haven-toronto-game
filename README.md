@@ -28,6 +28,17 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 # things we could add
 * more customization options
 * normal version where the objects are actually aligned lol
+* we are aware that the game might break if you spam the buttons :'> might fix sometime
+
+# things we learned
+* Herby: hi incurable. what are things that you learned from your first game jam?
+* incurable: herby is cracked. also figured out how to easily fill a selected layer in procreate despite pesky ref layers. uhhh also coding hard ;-; godot is really coolllll 
+* herby: I think you are really coolllll too :> personally I learned much more about organizing scenes in godot. and that the hardest part of making a game is planning it. also my godot installation cannot export web builds because it has c# support TnT
+* incurable: speaking of C#, you added many sfx into the game with ur voice. what did you learn about this experience?
+* herby: that was an anonymous voice actor. not me
+* herby: but this anonymous voice actor learned that you should spawn new audio nodes instead of referencing existing ones if you don't want your sound effects to stop and replay early
+* incurable: i tihnk forcing urself to make a project in a small amount of time was really interesitng. was one of the first times i did smth like this. was very motivating with u there herby. thx for creating with me <3
+* -u-
 
 # read our planning below!
 the layers are (bottom to top) (z indices)
