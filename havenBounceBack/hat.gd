@@ -22,7 +22,7 @@ func start():
 
 
 	placing_hat = true
-	position = Vector2(520,520)
+	position = Vector2(520,140)
 	
 	var direction_x = randf_range(-0.5,0.5)
 	# yay gambling

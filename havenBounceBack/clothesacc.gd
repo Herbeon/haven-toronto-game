@@ -11,7 +11,7 @@ var can_be_paused_now = false
 
 
 func start():
-	visual = ["collar1","collar2","ribbon1","coriscarf"].pick_random()
+	visual = ["collar1","collar2","ribbon1","scarf1"].pick_random()
 	$AnimatedSprite2D.play(visual)
 
 	get_node("CollisionShape2Dbig").disabled = true

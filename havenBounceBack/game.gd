@@ -78,6 +78,8 @@ func _process(float) -> void:
 	if(Input.is_action_just_pressed("trashbin")):
 		current_part.visible = false
 		current_part.got_paused()
+	#if(Input.is_action_just_pressed("newgame")):
+		#new_game()
 
 
 func new_game():

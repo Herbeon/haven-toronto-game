@@ -12,7 +12,7 @@ var can_be_paused_now = false
 func start():
 	visual = ["normal","frown","cori","default","dot"].pick_random()
 	$AnimatedSprite2D.play(visual)
-	position = Vector2(520,520)
+	position = Vector2(520,100)
 	get_node("CollisionShape2D").disabled = false
 
 	if(visual == "dot"):

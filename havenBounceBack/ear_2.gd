@@ -30,12 +30,12 @@ func start():
 
 
 	placing_ear = true
-	position = Vector2(520,520)
+	position = Vector2(520,300)
 	
 	var direction_x = randf_range(-1,1)
 	# yay gambling
 	
-	var direction_y = randf_range(-0.5,0.5)
+	var direction_y = randf_range(0,1)
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
