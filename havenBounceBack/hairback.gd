@@ -23,7 +23,7 @@ func start():
 
 
 	placing_hb = true
-	position = Vector2(520,300)
+	position = Vector2(520,520)
 	
 	var direction_x = randf_range(-0.5,0.5)
 	# yay gambling
