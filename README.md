@@ -1,6 +1,10 @@
 # haven-toronto-game
 our game for haven yay
 
+
+# godot crash counter
+* 2
+
 beep bop
 
 made by incurableregrets and herbeon - incurby
