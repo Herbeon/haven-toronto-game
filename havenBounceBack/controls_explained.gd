@@ -24,3 +24,7 @@ func _process(delta: float) -> void:
 		$left.visible = true 
 	else:
 		$left.visible = false
+	if(Input.is_action_pressed("trashbin")):
+		$down.visible = true 
+	else:
+		$down.visible = false
