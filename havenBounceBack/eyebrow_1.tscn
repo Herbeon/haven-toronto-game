@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c1faffmk11exl"]
+
+[ext_resource type="Script" uid="uid://cq52am8pxy33l" path="res://eyebrow_1.gd" id="1_c6t7c"]
+[ext_resource type="Texture2D" uid="uid://dcm3aigp7y1ws" path="res://images and character assets/Brow 2L.PNG" id="2_72he2"]
+[ext_resource type="Texture2D" uid="uid://bknw3ottxg2pe" path="res://images and character assets/Brow 1L.PNG" id="3_leqbu"]
+[ext_resource type="Texture2D" uid="uid://bai0k1hkpqnks" path="res://images and character assets/Brow 3L.PNG" id="4_vofx0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3p08f"]
+size = Vector2(106, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_72he2")
+}],
+"loop": 1,
+"name": &"concerned",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_leqbu")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vofx0")
+}],
+"loop": 1,
+"name": &"thick",
+"speed": 5.0
+}]
+
+[node name="eyebrow1" type="CharacterBody2D" unique_id=1964173345]
+script = ExtResource("1_c6t7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=839629095]
+position = Vector2(-3, -2)
+shape = SubResource("RectangleShape2D_3p08f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=659231245]
+sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"thick"

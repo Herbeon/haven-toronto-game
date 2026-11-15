@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://2t6deka3n40o"]
+
+[ext_resource type="Texture2D" uid="uid://jmn8jrk8anq8" path="res://images and character assets/corieye1.png" id="1_827my"]
+[ext_resource type="Script" uid="uid://ealmg2ji6jl2" path="res://eye_2.gd" id="1_nag14"]
+[ext_resource type="Texture2D" uid="uid://cmka3ag448j2m" path="res://images and character assets/Eye 1R.PNG" id="2_xl2v3"]
+[ext_resource type="Texture2D" uid="uid://8axy31lnmauo" path="res://images and character assets/demo/Eye demo.png" id="3_nag14"]
+[ext_resource type="Texture2D" uid="uid://ch7o8b53gc4lm" path="res://images and character assets/Funni eye R.PNG" id="4_ah4d4"]
+[ext_resource type="Texture2D" uid="uid://b0f2ml6avpiel" path="res://images and character assets/demo/Eye demo 2.png" id="4_ua7yv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0v4ov"]
+radius = 41.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcrup"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0v4ov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_827my")
+}],
+"loop": 1,
+"name": &"cori",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xl2v3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ah4d4")
+}],
+"loop": 1,
+"name": &"dot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nag14")
+}],
+"loop": 1,
+"name": &"frown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ua7yv")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[node name="eye_2" type="CharacterBody2D" unique_id=601769691]
+script = ExtResource("1_nag14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1084737353]
+shape = SubResource("CircleShape2D_0v4ov")
+
+[node name="CollisionShape2Dsmol" type="CollisionShape2D" parent="." unique_id=1602023787]
+position = Vector2(6, 1)
+shape = SubResource("CircleShape2D_tcrup")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1951879258]
+position = Vector2(10, 1)
+sprite_frames = SubResource("SpriteFrames_0v4ov")
+animation = &"dot"
+flip_h = true

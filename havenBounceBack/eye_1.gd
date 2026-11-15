@@ -10,10 +10,14 @@ var placing_eye = false
 var can_be_paused_now = false
 
 func start():
-	visual = ["normal","frown","cori","default"].pick_random()
+	visual = ["normal","frown","cori","default","dot"].pick_random()
 	$AnimatedSprite2D.play(visual)
 	position = Vector2(520,520)
+	get_node("CollisionShape2D").disabled = false
 
+	if(visual == "dot"):
+		get_node("CollisionShape2D").disabled = true
+		
 	placing_eye = true
 	
 	var direction_x = randf_range(-0.7,0.7)
@@ -35,10 +39,7 @@ func _ready():
 func _physics_process(delta):
 	if(placing_eye):
 		if(Input.is_action_just_pressed("pause") && can_be_paused_now):
-			velocity = Vector2.ZERO
-			done_eye.emit()
-			can_be_paused_now = false
-			placing_eye = false
+			got_paused()
 		if(Input.is_action_just_pressed("rotate_clockwise") && placing_eye):
 			#print ("rotate clockwise")
 			$AnimatedSprite2D.rotate(PI/6)
@@ -60,3 +61,9 @@ func _physics_process(delta):
 			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
 				velocity *= 1.1
 		can_be_paused_now = true
+
+func got_paused():
+		velocity = Vector2.ZERO
+		done_eye.emit()
+		can_be_paused_now = false
+		placing_eye = false

@@ -35,10 +35,8 @@ func _ready():
 func _physics_process(delta):
 	if(placing_mouth):
 		if(Input.is_action_just_pressed("pause") && can_be_paused_now):
-			velocity = Vector2.ZERO
-			done_mouth.emit()
-			can_be_paused_now = false
-			placing_mouth = false
+			got_paused()
+
 		if(Input.is_action_just_pressed("rotate_clockwise") && placing_mouth):
 			#print ("rotate clockwise")
 			$AnimatedSprite2D.rotate(PI/6)
@@ -60,3 +58,9 @@ func _physics_process(delta):
 			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
 				velocity *= 1.1
 		can_be_paused_now = true
+
+func got_paused():
+	velocity = Vector2.ZERO
+	done_mouth.emit()
+	can_be_paused_now = false
+	placing_mouth = false
