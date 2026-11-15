@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s5j3dtfmxylj"
-path="res://.godot/imported/CLICK TO PLAY.png-a8cacd82d434b9f79a0c0c33f7895b20.ctex"
+uid="uid://sxii2blyrkjg"
+path="res://.godot/imported/TADA.PNG-2e464a66338108b0feec2372ac1b7d60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images and character assets/CLICK TO PLAY.png"
-dest_files=["res://.godot/imported/CLICK TO PLAY.png-a8cacd82d434b9f79a0c0c33f7895b20.ctex"]
+source_file="res://images and character assets/TADA.PNG"
+dest_files=["res://.godot/imported/TADA.PNG-2e464a66338108b0feec2372ac1b7d60.ctex"]
 
 [params]
 
