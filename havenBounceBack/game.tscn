@@ -6,9 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://djicpc76ou862" path="res://head.tscn" id="4_7jktm"]
 [ext_resource type="Texture2D" uid="uid://fu3aolj76tm8" path="res://backgrounds/controls.png" id="4_hve3p"]
 [ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
+[ext_resource type="Script" uid="uid://3i7oe4mldhu7" path="res://controls_explained.gd" id="5_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://d3dmu0vh273mj" path="res://backgrounds/spacepressed.png" id="6_80cx4"]
+[ext_resource type="Texture2D" uid="uid://r44uqnma4mm" path="res://backgrounds/enterpressed.png" id="7_e8heu"]
 [ext_resource type="PackedScene" uid="uid://crvkgv3gvwurq" path="res://ear_1.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ccxtt8gld1bal" path="res://eye_1.tscn" id="7_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://ccu8645egrb3x" path="res://ear_2.tscn" id="7_vef74"]
+[ext_resource type="Texture2D" uid="uid://dayl2ovffhxuf" path="res://backgrounds/leftpressed.png" id="8_rvswv"]
+[ext_resource type="Texture2D" uid="uid://dh1t1yxedru7f" path="res://backgrounds/rightpressed.png" id="9_boyg6"]
 [ext_resource type="PackedScene" uid="uid://x2u2rsucnlf8" path="res://mouth.tscn" id="9_vef74"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
@@ -82,6 +87,43 @@ offset_top = 421.0
 offset_right = 1865.3333
 offset_bottom = 968.0
 texture = ExtResource("4_hve3p")
+expand_mode = 1
+script = ExtResource("5_7sc4i")
+
+[node name="space" type="TextureRect" parent="controls explained" unique_id=646424990]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 805.3333
+offset_bottom = 593.0
+texture = ExtResource("6_80cx4")
+expand_mode = 1
+
+[node name="enter" type="TextureRect" parent="controls explained" unique_id=234672408]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -52.0
+offset_right = 836.0
+offset_bottom = 593.0
+texture = ExtResource("7_e8heu")
+expand_mode = 1
+
+[node name="left" type="TextureRect" parent="controls explained" unique_id=718031464]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -71.0
+offset_right = 840.6667
+offset_bottom = 570.0
+texture = ExtResource("8_rvswv")
+expand_mode = 1
+
+[node name="right" type="TextureRect" parent="controls explained" unique_id=364765185]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -56.0
+offset_right = 793.6667
+offset_bottom = 558.0
+texture = ExtResource("9_boyg6")
 expand_mode = 1
 
 [node name="torso" parent="." unique_id=447771115 instance=ExtResource("4_ryrav")]
