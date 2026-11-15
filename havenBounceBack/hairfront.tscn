@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://d1q0nlvaggd2k"]
+
+[ext_resource type="Script" uid="uid://qurc52xl4ve" path="res://hairfront.gd" id="1_iu4xo"]
+[ext_resource type="Texture2D" uid="uid://bk8m2vy16p5an" path="res://images and character assets/Bang 3 D.PNG" id="2_cbbmp"]
+[ext_resource type="Texture2D" uid="uid://d2g20qvagpqhr" path="res://images and character assets/Bang 3 L.PNG" id="3_774d6"]
+[ext_resource type="Texture2D" uid="uid://dy273pkuqq2ol" path="res://images and character assets/Bang 3 M.PNG" id="4_0gh8b"]
+[ext_resource type="Texture2D" uid="uid://b7u2t7xtn5ul4" path="res://images and character assets/Bang 2 D.PNG" id="5_j5p4b"]
+[ext_resource type="Texture2D" uid="uid://blk0ldwd66ei1" path="res://images and character assets/Bang 2 L.PNG" id="6_auy6t"]
+[ext_resource type="Texture2D" uid="uid://kp6wwvk5h4j6" path="res://images and character assets/Bang 2 M.PNG" id="7_us3uo"]
+[ext_resource type="Texture2D" uid="uid://p31cexlioel5" path="res://images and character assets/Bang 1 D.PNG" id="8_7whu4"]
+[ext_resource type="Texture2D" uid="uid://b8w05wsln6bry" path="res://images and character assets/Bang 1 L.PNG" id="9_lt2ob"]
+[ext_resource type="Texture2D" uid="uid://cbgdvbpwedydi" path="res://images and character assets/Bang 1 M.PNG" id="10_8xdgc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3p08f"]
+radius = 191.37659
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cbbmp")
+}],
+"loop": 1,
+"name": &"bowl1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_774d6")
+}],
+"loop": 1,
+"name": &"bowl2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0gh8b")
+}],
+"loop": 1,
+"name": &"bowl3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_j5p4b")
+}],
+"loop": 1,
+"name": &"incurable1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_auy6t")
+}],
+"loop": 1,
+"name": &"incurable2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_us3uo")
+}],
+"loop": 1,
+"name": &"incurable3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7whu4")
+}],
+"loop": 1,
+"name": &"traveller1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_lt2ob")
+}],
+"loop": 1,
+"name": &"traveller2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8xdgc")
+}],
+"loop": 1,
+"name": &"traveller3",
+"speed": 5.0
+}]
+
+[node name="hairfront" type="CharacterBody2D" unique_id=590868634]
+script = ExtResource("1_iu4xo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459451969]
+shape = SubResource("CircleShape2D_3p08f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1550983054]
+sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"traveller1"

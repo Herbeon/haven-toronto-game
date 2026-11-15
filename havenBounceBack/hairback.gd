@@ -27,7 +27,7 @@ func start():
 	var direction_x = randf_range(-0.5,0.5)
 	# yay gambling
 	
-	var direction_y = randf_range(-1,1)
+	var direction_y = randf_range(-0.5,0.5)
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
@@ -46,9 +46,9 @@ func _physics_process(delta):
 			can_be_paused_now = false
 			placing_hb = false
 		if(Input.is_action_just_pressed("rotate_clockwise")&& placing_hb):
-			$AnimatedSprite2D.rotate(PI/6)
+			$AnimatedSprite2D.rotate(PI/12)
 		if(Input.is_action_just_pressed("rotate_ccwise")&& placing_hb):
-			$AnimatedSprite2D.rotate(-PI/6)
+			$AnimatedSprite2D.rotate(-PI/12)
 			
 		var collision = move_and_collide(velocity * delta)
 		# move and collide returns a boolean if it hits something

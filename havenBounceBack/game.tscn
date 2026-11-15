@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://x2u2rsucnlf8" path="res://mouth.tscn" id="9_vef74"]
 [ext_resource type="PackedScene" uid="uid://2t6deka3n40o" path="res://eye_2.tscn" id="15_80cx4"]
 [ext_resource type="PackedScene" uid="uid://dol4sbitss48s" path="res://hairback.tscn" id="18_rvswv"]
+[ext_resource type="PackedScene" uid="uid://d1q0nlvaggd2k" path="res://hairfront.tscn" id="19_boyg6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -172,7 +173,14 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="hairback" parent="." unique_id=47123858 instance=ExtResource("18_rvswv")]
+z_index = 1
 position = Vector2(-616, -200)
+
+[node name="hairfront" parent="." unique_id=590868634 instance=ExtResource("19_boyg6")]
+z_index = 16
+position = Vector2(-930, 660)
+collision_layer = 16
+collision_mask = 16
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890427670]
 z_index = -10

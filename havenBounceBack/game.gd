@@ -22,6 +22,7 @@ extends Node2D
 @onready var eye1 = $eye1
 @onready var eye2 = $eye2
 @onready var hairback = $hairback
+@onready var hairfront = $hairfront
 @onready var ear1 = $ear1
 @onready var ear2 = $ear2
 @onready var mouth = $mouth
@@ -39,6 +40,8 @@ func _ready() -> void:
 	eye1.done_eye.connect(eye_is_done)
 	eye2.done_eye2.connect(eye2_is_done)
 	hairback.done_hairback.connect(hairback_is_done)
+	hairfront.done_hairfront.connect(hairfront_is_done)
+
 	head.done_head.connect(head_is_done)
 	ear1.done_ear.connect(ear_is_done)
 	ear2.done_ear.connect(ear_2_is_done)
@@ -105,4 +108,10 @@ func mouth_is_done():
 	hairback.start()
 	
 func hairback_is_done():
+	label.text = "Currently placing front of hair"
+	
+	current_part = $hairfront
+	hairfront.start()
+	
+func hairfront_is_done():
 	label.text = "Currently placing something I guess"
