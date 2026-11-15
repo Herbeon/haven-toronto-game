@@ -54,6 +54,7 @@ var game_started_lol = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Audioyippie.play()
 	$complete.visible = false
 	bg_music.autoplay = false
 	#load("res://audio/ambientwaterfall.wav")
@@ -261,7 +262,7 @@ func decor1_is_done():
 	decor2.start()
 	
 func decor2_is_done():
-	$Audiobeep.play()
+	$Audiotada.play()
 	$complete.visible = true
 	var tween = create_tween()
 	tween.tween_property($complete,"scale", Vector2(1,1.1), 0.1)
