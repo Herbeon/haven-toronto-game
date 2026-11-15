@@ -18,7 +18,8 @@ func start():
 	if(visual == "dot"):
 		get_node("CollisionShape2D").disabled = true
 	placing_eye = true
-	
+	if(visual == "default"):
+		$AnimatedSprite2D.flip_h = false
 	var direction_x = randf_range(-0.7,0.7)
 	# yay gambling
 	
