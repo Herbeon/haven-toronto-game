@@ -36,6 +36,9 @@ extends Node2D
 
 @onready var hat = $hat
 
+@onready var decor1 = $decor1
+@onready var decor2 = $decor2
+
 @onready var label = $Control/Label
 @onready var relabel = $Control/Relabel
 
@@ -68,7 +71,8 @@ func _ready() -> void:
 	head.collided.connect(collisionhappened)
 	headacc1.collided.connect(collisionhappened)
 	headacc2.collided.connect(collisionhappened)
-
+	decor1.collided.connect(collisionhappened)
+	decor2.collided.connect(collisionhappened)
 
 	eye2.done_eye2.connect(eye2_is_done)
 	hairback.done_hairback.connect(hairback_is_done)
@@ -85,6 +89,9 @@ func _ready() -> void:
 
 	eyebrow1.done_eb1.connect(eyebrow1_is_done)
 	eyebrow2.done_eb2.connect(eyebrow2_is_done)
+	
+	decor1.done_decor1.connect(decor1_is_done)
+	decor2.done_decor2.connect(decor2_is_done)
 	
 	hat.done_hat.connect(hat_is_done)
 	#new_game()
@@ -205,6 +212,15 @@ func headacc2_is_done():
 	hat.start()
 	
 func hat_is_done():
-	label.text = "Currently should be placing stuff"
+	label.text = "Currently placing decor 1"
+	current_part = $decor1
 	
+	decor1.start()
+
+func decor1_is_done():
+	label.text = "Currently placing decor 2"
+	current_part = $decor2 
+	decor2.start()
+func decor2_is_done():
+	label.text = "done!"
 	

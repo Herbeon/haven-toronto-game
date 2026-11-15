@@ -1,7 +1,46 @@
 [gd_scene format=3 uid="uid://clvw6wogo4w4c"]
 
+[ext_resource type="Script" uid="uid://bobxkdxxakyj0" path="res://decor_2.gd" id="1_hg2b1"]
+[ext_resource type="Texture2D" uid="uid://dtn3picdcawpa" path="res://images and character assets/Deco 3 R.PNG" id="1_shncy"]
+[ext_resource type="Texture2D" uid="uid://dfptjwl6wclc1" path="res://images and character assets/Deco 2 R.PNG" id="2_hg2b1"]
+[ext_resource type="Texture2D" uid="uid://6hmktwd5wec2" path="res://images and character assets/Deco 1 R.PNG" id="3_xm2ri"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nqklv"]
+radius = 156.05127
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8vgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_shncy")
+}],
+"loop": 1,
+"name": &"drop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hg2b1")
+}],
+"loop": 1,
+"name": &"flower",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xm2ri")
+}],
+"loop": 1,
+"name": &"sparkle",
+"speed": 5.0
+}]
+
 [node name="decor2" type="CharacterBody2D" unique_id=82847693]
+script = ExtResource("1_hg2b1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=410349597]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1776331607]
+shape = SubResource("CircleShape2D_nqklv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=502232407]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1440770192]
+sprite_frames = SubResource("SpriteFrames_y8vgw")
+animation = &"sparkle"
