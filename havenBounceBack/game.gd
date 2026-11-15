@@ -65,7 +65,7 @@ func _ready() -> void:
 	eyebrow2.done_eb2.connect(eyebrow2_is_done)
 	
 	hat.done_hat.connect(hat_is_done)
-	new_game()
+	#new_game()
 
 func _process(float) -> void:
 	if(Input.is_action_just_pressed("reload")):

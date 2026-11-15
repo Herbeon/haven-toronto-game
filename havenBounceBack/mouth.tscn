@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://bxdyign7sege" path="res://images and character assets/Mouth 2.PNG" id="1_rm3cv"]
 [ext_resource type="Script" uid="uid://cqaxolfh4sxyg" path="res://mouth.gd" id="1_yuly8"]
 [ext_resource type="Texture2D" uid="uid://btx1pwqyco102" path="res://images and character assets/Mouth 1.PNG" id="2_yuly8"]
+[ext_resource type="Texture2D" uid="uid://d4annr85bmoiu" path="res://images and character assets/Mouth 6.png" id="4_f7dct"]
+[ext_resource type="Texture2D" uid="uid://bce0umka03lmy" path="res://images and character assets/Mouth 3.png" id="5_12a1s"]
+[ext_resource type="Texture2D" uid="uid://dnmypi4edaurw" path="res://images and character assets/Mouth 5.png" id="6_7b0w5"]
+[ext_resource type="Texture2D" uid="uid://c0hlgjki71o5r" path="res://images and character assets/Mouth 4.png" id="7_k0ut1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3p08f"]
 radius = 26.019224
@@ -24,6 +28,38 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_f7dct")
+}],
+"loop": 1,
+"name": &"grin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_12a1s")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7b0w5")
+}],
+"loop": 1,
+"name": &"shock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k0ut1")
+}],
+"loop": 1,
+"name": &"silly",
+"speed": 5.0
 }]
 
 [node name="mouth" type="CharacterBody2D" unique_id=1873407494]
@@ -35,4 +71,4 @@ shape = SubResource("CircleShape2D_3p08f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=868728360]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_tcrup")
-animation = &"colon3"
+animation = &"grin"

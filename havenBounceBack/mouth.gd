@@ -10,7 +10,7 @@ var placing_mouth = false
 var can_be_paused_now = false
 
 func start():
-	visual = ["default","colon3"].pick_random()
+	visual = ["default","colon3","silly","shock","open","grin"].pick_random()
 	$AnimatedSprite2D.play(visual)
 	position = Vector2(520,520)
 
