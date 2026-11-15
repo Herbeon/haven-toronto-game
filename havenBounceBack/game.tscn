@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dayl2ovffhxuf" path="res://backgrounds/leftpressed.png" id="8_rvswv"]
 [ext_resource type="Texture2D" uid="uid://dh1t1yxedru7f" path="res://backgrounds/rightpressed.png" id="9_boyg6"]
 [ext_resource type="PackedScene" uid="uid://x2u2rsucnlf8" path="res://mouth.tscn" id="9_vef74"]
+[ext_resource type="PackedScene" uid="uid://2t6deka3n40o" path="res://eye_2.tscn" id="15_80cx4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font_size = 40
@@ -147,6 +148,8 @@ z_index = 20
 position = Vector2(-236, 692)
 collision_layer = 256
 collision_mask = 256
+
+[node name="eye2" parent="." unique_id=601769691 instance=ExtResource("15_80cx4")]
 
 [node name="mouth" parent="." unique_id=1873407494 instance=ExtResource("9_vef74")]
 z_index = 11

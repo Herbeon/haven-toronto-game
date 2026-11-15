@@ -19,6 +19,8 @@ extends Node2D
 
 @onready var head = $head
 @onready var eye1 = $eye1
+@onready var eye2 = $eye2
+
 @onready var ear1 = $ear1
 @onready var ear2 = $ear2
 @onready var mouth = $mouth
@@ -33,6 +35,8 @@ var reloads_left = 50
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	eye1.done_eye.connect(eye_is_done)
+	eye2.done_eye2.connect(eye2_is_done)
+
 	head.done_head.connect(head_is_done)
 	ear1.done_ear.connect(ear_is_done)
 	ear2.done_ear.connect(ear_2_is_done)
@@ -59,13 +63,18 @@ func new_game():
 	relabel.text = "reloads left: " + str(reloads_left)
 	
 func head_is_done():
-	label.text = "Currently placing eye"
+	label.text = "Currently placing first eye"
 	current_part = $eye1
 
 	eye1.start()
 	#print("start 1 eye")
 
 func eye_is_done():
+	label.text = "Currently placing second eye"
+	current_part = $eye2
+	eye2.start()
+
+func eye2_is_done():
 	label.text = "Currently placing first ear"
 	current_part = $ear1
 

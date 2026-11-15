@@ -3,11 +3,14 @@
 [ext_resource type="Script" uid="uid://bq50pp73rmymu" path="res://eye_1.gd" id="1_ln44f"]
 [ext_resource type="Texture2D" uid="uid://jmn8jrk8anq8" path="res://images and character assets/corieye1.png" id="2_m6jhr"]
 [ext_resource type="Texture2D" uid="uid://2nvr4vx77eye" path="res://images and character assets/Eye 1L.PNG" id="3_fmipp"]
+[ext_resource type="Texture2D" uid="uid://b4ofed23xy01l" path="res://images and character assets/Funni eye L.PNG" id="4_fmipp"]
 [ext_resource type="Texture2D" uid="uid://8axy31lnmauo" path="res://images and character assets/demo/Eye demo.png" id="4_m6jhr"]
 [ext_resource type="Texture2D" uid="uid://b0f2ml6avpiel" path="res://images and character assets/demo/Eye demo 2.png" id="5_fmipp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ln44f"]
 radius = 41.4367
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcrup"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
 animations = [{
@@ -25,6 +28,14 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_fmipp")
+}],
+"loop": 1,
+"name": &"dot",
 "speed": 5.0
 }, {
 "frames": [{
@@ -52,6 +63,10 @@ script = ExtResource("1_ln44f")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=743004663]
 shape = SubResource("CircleShape2D_ln44f")
 
+[node name="CollisionShape2Dsmol" type="CollisionShape2D" parent="." unique_id=904719611]
+shape = SubResource("CircleShape2D_tcrup")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=45060400]
 position = Vector2(-2, 1)
 sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"dot"

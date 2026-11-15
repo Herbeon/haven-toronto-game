@@ -10,10 +10,14 @@ var placing_eye = false
 var can_be_paused_now = false
 
 func start():
-	visual = ["normal","frown","cori","default"].pick_random()
+	visual = ["normal","frown","cori","default","dot"].pick_random()
 	$AnimatedSprite2D.play(visual)
 	position = Vector2(520,520)
+	get_node("CollisionShape2D").disabled = false
 
+	if(visual == "dot"):
+		get_node("CollisionShape2D").disabled = true
+		
 	placing_eye = true
 	
 	var direction_x = randf_range(-0.7,0.7)
