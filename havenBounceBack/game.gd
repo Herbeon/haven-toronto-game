@@ -259,11 +259,12 @@ func decor1_is_done():
 	label.text = "Currently placing decor 2"
 	current_part = $decor2 
 	decor2.start()
+	
 func decor2_is_done():
 	$Audiobeep.play()
 	$complete.visible = true
 	var tween = create_tween()
-	tween.tween_property($complete,"scale", Vector2(1.1,1.1), 0.1)
+	tween.tween_property($complete,"scale", Vector2(1,1.1), 0.1)
 	tween.tween_property($complete,"scale", Vector2(1,1), 0.1)
 	label.text = ""
 	relabel.text = ""

@@ -31,7 +31,7 @@ func start():
 
 
 	placing_ear = true
-	position = Vector2(520,300)
+	position = Vector2(520,500)
 	
 	var direction_x = randf_range(-1,1)
 	# yay gambling
