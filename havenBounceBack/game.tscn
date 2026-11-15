@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://d4b8sey340oqa" path="res://backgrounds/porple thing.png" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://hijeq1pt7gji" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="FontFile" uid="uid://0tenstpyqr73" path="res://CoriFont.ttf" id="2_e8heu"]
+[ext_resource type="Texture2D" uid="uid://b5opp0fwf7diw" path="res://images and character assets/demo/Template.png" id="2_xfvwf"]
+[ext_resource type="Script" uid="uid://gas08x5ysysv" path="res://title_screen.gd" id="3_dhpj7"]
 [ext_resource type="PackedScene" uid="uid://djicpc76ou862" path="res://head.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://u0ltr3xuybna" path="res://images and character assets/Bg.png" id="4_x5p1p"]
@@ -37,7 +39,7 @@ font_color = Color(0.13333334, 0.105882354, 0.34901962, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_j5wjh"]
 font = ExtResource("2_e8heu")
-font_size = 30
+font_size = 50
 font_color = Color(0.2901961, 0, 1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc0e3"]
@@ -86,6 +88,20 @@ animations = [{
 [node name="game" type="Node2D" unique_id=1374351353]
 script = ExtResource("1_fc0e3")
 
+[node name="title_screen" type="Sprite2D" parent="." unique_id=819712015]
+z_index = 40
+position = Vector2(969.5, 539.5)
+scale = Vector2(1.9228516, 1.1123047)
+texture = ExtResource("2_xfvwf")
+script = ExtResource("3_dhpj7")
+
+[node name="title_screen2" type="TextureRect" parent="." unique_id=437923891]
+visible = false
+z_index = 40
+offset_right = 1928.0
+offset_bottom = 1106.0
+texture = ExtResource("2_xfvwf")
+
 [node name="Control" type="Control" parent="." unique_id=828224688]
 layout_mode = 3
 anchors_preset = 0
@@ -96,20 +112,19 @@ offset_bottom = 726.0
 
 [node name="Label" type="Label" parent="Control" unique_id=1692377689]
 layout_mode = 0
-offset_left = -178.0
-offset_top = 25.0
-offset_right = 307.0
-offset_bottom = 86.0
-text = "Currently placing:
-eye"
+offset_left = -198.0
+offset_top = 26.0
+offset_right = 287.0
+offset_bottom = 151.0
+text = "Currently placing head"
 label_settings = SubResource("LabelSettings_m6jhr")
 
 [node name="Relabel" type="Label" parent="Control" unique_id=907465893]
 layout_mode = 0
-offset_left = -151.0
-offset_top = 158.0
-offset_right = 54.0
-offset_bottom = 195.0
+offset_left = -197.0
+offset_top = 185.0
+offset_right = 145.0
+offset_bottom = 246.0
 text = "reloads left: 50"
 label_settings = SubResource("LabelSettings_j5wjh")
 

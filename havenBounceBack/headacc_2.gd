@@ -12,7 +12,7 @@ var can_be_paused_now = false
 func start():
 	visual = ["cool","horn","ribbon"].pick_random()
 	$AnimatedSprite2D.play(visual)
-	position = Vector2(120,120)
+	position = Vector2(220,220)
 
 	placing_headacc = true
 	

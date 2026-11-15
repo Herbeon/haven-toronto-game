@@ -9,7 +9,7 @@ signal done_head
 var paused = false
 
 func start():
-	position = Vector2(530,200)
+	position = Vector2(530,350)
 	
 	var direction_x = 0
 	# yay gambling
