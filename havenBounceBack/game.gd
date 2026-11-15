@@ -54,6 +54,7 @@ var game_started_lol = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$complete.visible = false
 	bg_music.autoplay = false
 	#load("res://audio/ambientwaterfall.wav")
 	$title_screen.game_started.connect(title_screen_clicked)
@@ -217,7 +218,7 @@ func hairback_is_done():
 func hairfront_is_done():
 	$Audiobeep.play()
 
-	label.text = "Currently placing clothing"
+	label.text = "Currently placing neck accessory"
 	
 	current_part = $clothesacc
 	clothesacc.start()
@@ -260,6 +261,10 @@ func decor1_is_done():
 	decor2.start()
 func decor2_is_done():
 	$Audiobeep.play()
-
-	label.text = "done!"
+	$complete.visible = true
+	var tween = create_tween()
+	tween.tween_property($complete,"scale", Vector2(1.1,1.1), 0.1)
+	tween.tween_property($complete,"scale", Vector2(1,1), 0.1)
+	label.text = ""
+	relabel.text = ""
 	

@@ -45,6 +45,7 @@
 [ext_resource type="AudioStream" uid="uid://b5nbvcgmw8t5w" path="res://audio/boop.wav" id="35_4v2jo"]
 [ext_resource type="AudioStream" uid="uid://b5ka7i2oc65do" path="res://audio/beep.wav" id="36_l1i01"]
 [ext_resource type="AudioStream" uid="uid://dg7sc4g7nm55m" path="res://audio/blorp.wav" id="37_r62pu"]
+[ext_resource type="Texture2D" uid="uid://sxii2blyrkjg" path="res://images and character assets/TADA.PNG" id="46_m28ev"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8m7pp"]
 animations = [{
@@ -420,3 +421,8 @@ volume_db = -15.0
 [node name="Audioboing1" type="AudioStreamPlayer" parent="." unique_id=501289898]
 stream = ExtResource("33_7knny")
 volume_db = -15.0
+
+[node name="complete" type="Sprite2D" parent="." unique_id=876389681]
+position = Vector2(1426, 775)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("46_m28ev")

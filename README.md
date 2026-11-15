@@ -15,7 +15,7 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 
 # features
 * cool title screen and art
-* rotatable sprites
+* rotatable accessories
 * tons of chances to gamble!
 
 # godot crash counter
@@ -25,16 +25,6 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 * more customization options
 * normal version where the objects are actually aligned lol
 
-beep bop
-
-made by incurableregrets and herbeon - incurby
-
-owo
-
-boop
-
-hello herby
-
 # todo
 * write readme
 * design make itch thumbnail
@@ -42,6 +32,9 @@ hello herby
 * decoration art
 * cover art
 * polish
+
+
+# our ramble planning below
 
 the layers are (bottom to top) (z indices)
 * background (0)
@@ -72,4 +65,4 @@ collision layers:
 * 9: face things: eyes, mouth, nose, eyebrows
 * 10: decoration
 
-reloads are available, counted in a total with game script
+made by incurableregrets and herbeon - incurby
