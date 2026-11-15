@@ -55,7 +55,8 @@ func _physics_process(delta):
 			#tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)
 			#tween.tween_property($AnimatedSprite2D,"scale", Vector2(1,1), 0.1)
 			if(!visual.contains("wisp")):
-				$AnimatedSprite2D.rotate(PI/2)
+				var rotationamount = tan(velocity.x / velocity.y)
+				$AnimatedSprite2D.rotate(rotationamount*2)
 
 			velocity = velocity.bounce(collision.get_normal())
 

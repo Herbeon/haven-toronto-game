@@ -5,7 +5,6 @@ extends Node2D
 #body (preset)
 #head
 #ears
-#nose 
 #mouth
 #eyes
 #brows
@@ -75,7 +74,7 @@ func _process(float) -> void:
 			reloads_left -= 1
 			relabel.text = "reloads left: " + str(reloads_left)
 		else:
-			relabel.text = "no more reloads left lol"
+			relabel.text = "no more reloads left!"
 	if(Input.is_action_just_pressed("trashbin")):
 		current_part.visible = false
 		current_part.got_paused()
