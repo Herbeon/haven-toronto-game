@@ -1,10 +1,53 @@
 [gd_scene format=3 uid="uid://8nsp8p2gk6tv"]
 
+[ext_resource type="Script" uid="uid://c5x7ptf3iwm16" path="res://clothesacc.gd" id="1_5dtfb"]
+[ext_resource type="Texture2D" uid="uid://c4ngfcamiug0a" path="res://images and character assets/Collar 1.PNG" id="1_6bndm"]
+[ext_resource type="Texture2D" uid="uid://bis2iu3o6k6m1" path="res://images and character assets/Collar 2.PNG" id="2_5dtfb"]
+[ext_resource type="Texture2D" uid="uid://c6vpoqwc7cdvu" path="res://images and character assets/head acc 2.PNG" id="3_4os5d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3p08f"]
+radius = 58.034473
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcrup"]
+size = Vector2(478, 109)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6bndm")
+}],
+"loop": 1,
+"name": &"collar1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5dtfb")
+}],
+"loop": 1,
+"name": &"collar2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4os5d")
+}],
+"loop": 1,
+"name": &"ribbon1",
+"speed": 5.0
+}]
 
 [node name="clothesacc" type="CharacterBody2D" unique_id=1491631888]
+script = ExtResource("1_5dtfb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278180839]
+shape = SubResource("CircleShape2D_3p08f")
+
+[node name="CollisionShape2Dbig" type="CollisionShape2D" parent="." unique_id=1855208167]
+position = Vector2(-20, -1.5)
+shape = SubResource("RectangleShape2D_tcrup")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2074848652]
 sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"collar1"

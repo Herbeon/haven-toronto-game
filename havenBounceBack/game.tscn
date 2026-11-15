@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://d4b8sey340oqa" path="res://backgrounds/porple thing.png" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://hijeq1pt7gji" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="FontFile" uid="uid://0tenstpyqr73" path="res://CoriFont.ttf" id="2_e8heu"]
-[ext_resource type="Texture2D" uid="uid://brd1dgywy1nsp" path="res://backgrounds/cyan bg.png" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://djicpc76ou862" path="res://head.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
+[ext_resource type="Texture2D" uid="uid://u0ltr3xuybna" path="res://images and character assets/Bg.png" id="4_x5p1p"]
 [ext_resource type="Script" uid="uid://3i7oe4mldhu7" path="res://controls_explained.gd" id="5_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://d0jh86kvc2fsn" path="res://backgrounds/controls2.png" id="5_x5p1p"]
 [ext_resource type="Texture2D" uid="uid://d3dmu0vh273mj" path="res://backgrounds/spacepressed.png" id="6_80cx4"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://d1q0nlvaggd2k" path="res://hairfront.tscn" id="19_boyg6"]
 [ext_resource type="PackedScene" uid="uid://c1faffmk11exl" path="res://eyebrow_1.tscn" id="20_hb5m1"]
 [ext_resource type="PackedScene" uid="uid://i0nxfc51dnfi" path="res://eyebrow_2.tscn" id="21_x5p1p"]
+[ext_resource type="PackedScene" uid="uid://8nsp8p2gk6tv" path="res://clothesacc.tscn" id="23_qhcbd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -55,26 +56,26 @@ script = ExtResource("1_fc0e3")
 [node name="Control" type="Control" parent="." unique_id=828224688]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 345.0
-offset_top = 320.0
-offset_right = 385.0
-offset_bottom = 360.0
+offset_left = 1638.0
+offset_top = 550.0
+offset_right = 1678.0
+offset_bottom = 590.0
 
 [node name="Label" type="Label" parent="Control" unique_id=1692377689]
 layout_mode = 0
-offset_left = 815.0
-offset_top = -246.0
-offset_right = 983.0
-offset_bottom = -223.0
+offset_left = -178.0
+offset_top = 25.0
+offset_right = 307.0
+offset_bottom = 86.0
 text = "Currently placing: eye"
 label_settings = SubResource("LabelSettings_m6jhr")
 
 [node name="Relabel" type="Label" parent="Control" unique_id=907465893]
 layout_mode = 0
-offset_left = 820.0
-offset_top = -141.0
-offset_right = 912.0
-offset_bottom = -118.0
+offset_left = -151.0
+offset_top = 148.0
+offset_right = 54.0
+offset_bottom = 185.0
 text = "reloads left: 50"
 label_settings = SubResource("LabelSettings_j5wjh")
 
@@ -88,7 +89,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 1040.0
 offset_bottom = 1040.0
-texture = ExtResource("3_ryrav")
+texture = ExtResource("4_x5p1p")
 
 [node name="controls explained" type="TextureRect" parent="." unique_id=1816787531]
 offset_left = 1069.0
@@ -206,6 +207,12 @@ z_index = 23
 position = Vector2(-1035, 1125)
 collision_layer = 256
 collision_mask = 256
+
+[node name="clothesacc" parent="." unique_id=1491631888 instance=ExtResource("23_qhcbd")]
+z_index = 15
+position = Vector2(-367, 1383)
+collision_layer = 2
+collision_mask = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890427670]
 z_index = -10

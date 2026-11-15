@@ -39,7 +39,10 @@ func _physics_process(delta):
 			var tween = create_tween()
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1,1), 0.1)
-			$AnimatedSprite2D.rotate(PI / 12)
+			if(randf() < 0.5):
+				$AnimatedSprite2D.rotate(PI / 20)
+			else:
+				$AnimatedSprite2D.rotate(-PI / 20)
 			velocity = velocity.bounce(collision.get_normal())
 
 			var thing_we_hit = collision.get_collider()

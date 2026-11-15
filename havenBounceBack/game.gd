@@ -31,6 +31,7 @@ extends Node2D
 
 @onready var mouth = $mouth
 
+@onready var clothesacc = $clothesacc
 
 @onready var label = $Control/Label
 @onready var relabel = $Control/Relabel
@@ -51,6 +52,7 @@ func _ready() -> void:
 	ear2.done_ear.connect(ear_2_is_done)
 	mouth.done_mouth.connect(mouth_is_done)
 	
+	clothesacc.done_clothesacc.connect(clothesacc_is_done)
 	eyebrow1.done_eb1.connect(eyebrow1_is_done)
 	eyebrow2.done_eb2.connect(eyebrow2_is_done)
 	new_game()
@@ -75,11 +77,11 @@ func new_game():
 	torso.start()
 	head.start()
 	current_part = $head
-	label.text = "Currently placing head"
+	label.text = "Currently placing:\nhead"
 	relabel.text = "reloads left: " + str(reloads_left)
 	
 func head_is_done():
-	label.text = "Currently placing first eye"
+	label.text = "Currently placing:\nfirst eye"
 	current_part = $eye1
 
 	eye1.start()
@@ -87,53 +89,61 @@ func head_is_done():
 
 
 func eye1_is_done():
-	label.text = "Currently placing second eye"
+	label.text = "Currently placing:\nsecond eye"
 	current_part = $eye2
 	eye2.start()
 
 func eye2_is_done():
-	label.text = "Currently placing first eyebrow"
+	label.text = "Currently placing:\nfirst eyebrow"
 	current_part = $eyebrow1
 
 	eyebrow1.start()
 	
 func eyebrow1_is_done():
-	label.text = "Currently placing second eyebrow"
+	label.text = "Currently placing:\nsecond eyebrow"
 	current_part = $eyebrow2
 	
 	eyebrow2.start()
 
 func eyebrow2_is_done():
-	label.text = "Currently placing first ear"
+	label.text = "Currently placing:\nfirst ear"
 	current_part = $ear1
 	
 	ear1.start()
 
 
 func ear_is_done():
-	label.text = "Currently placing second ear"
+	label.text = "Currently placing:\nsecond ear"
 
 	current_part = $ear2
 
 	ear2.start()
 	
 func ear_2_is_done():
-	label.text = "Currently placing mouth"
+	label.text = "Currently placing:\nmouth"
 
 	current_part = $mouth
 	mouth.start()
 	
 func mouth_is_done():
-	label.text = "Currently placing back of hair"
+	label.text = "Currently placing:\nback of hair"
 	
 	current_part = $hairback
 	hairback.start()
 	
 func hairback_is_done():
-	label.text = "Currently placing front of hair"
+	label.text = "Currently placing:\nfront of hair"
 	
 	current_part = $hairfront
 	hairfront.start()
 	
 func hairfront_is_done():
-	label.text = "Currently placing something I guess"
+	label.text = "Currently placing:\nclothing"
+	
+	current_part = $clothesacc
+	clothesacc.start()
+
+func clothesacc_is_done():
+	label.text = "Currently placing:\nsomething"
+	
+	
