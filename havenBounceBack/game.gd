@@ -32,6 +32,8 @@ extends Node2D
 @onready var mouth = $mouth
 
 @onready var clothesacc = $clothesacc
+@onready var headacc1 = $headacc1
+@onready var headacc2 = $headacc2
 
 @onready var label = $Control/Label
 @onready var relabel = $Control/Relabel
@@ -53,6 +55,9 @@ func _ready() -> void:
 	mouth.done_mouth.connect(mouth_is_done)
 	
 	clothesacc.done_clothesacc.connect(clothesacc_is_done)
+	headacc1.done_headacc.connect(headacc1_is_done)
+	headacc2.done_headacc.connect(headacc2_is_done)
+
 	eyebrow1.done_eb1.connect(eyebrow1_is_done)
 	eyebrow2.done_eb2.connect(eyebrow2_is_done)
 	new_game()
@@ -144,6 +149,15 @@ func hairfront_is_done():
 	clothesacc.start()
 
 func clothesacc_is_done():
+	label.text = "Currently placing:\nfirst head accessory"
+	current_part = $headacc1
+	headacc1.start()
+
+func headacc1_is_done():
+	label.text = "Currently placing:\nsecond head accessory"
+	current_part = $headacc2
+	headacc2.start()
+
+func headacc2_is_done():
 	label.text = "Currently placing:\nsomething"
-	
 	

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b8tgl53jjj4s6"]
+
+[ext_resource type="Texture2D" uid="uid://b1gvkfaar76f7" path="res://images and character assets/Face acc 1.PNG" id="1_luyf7"]
+[ext_resource type="Script" uid="uid://cvfqnawri6x00" path="res://headacc_2.gd" id="1_rmjbf"]
+[ext_resource type="Texture2D" uid="uid://4ey7tebv25qt" path="res://images and character assets/Horn 1R.PNG" id="2_rmjbf"]
+[ext_resource type="Texture2D" uid="uid://c6vpoqwc7cdvu" path="res://images and character assets/head acc 2.PNG" id="3_vky0q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhkc0"]
+size = Vector2(80, 268)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rhnau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_luyf7")
+}],
+"loop": 1,
+"name": &"cool",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rmjbf")
+}],
+"loop": 1,
+"name": &"horn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vky0q")
+}],
+"loop": 1,
+"name": &"ribbon",
+"speed": 5.0
+}]
+
+[node name="headacc2" type="CharacterBody2D" unique_id=1393568091]
+script = ExtResource("1_rmjbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1033260280]
+position = Vector2(1, 8)
+shape = SubResource("RectangleShape2D_uhkc0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=197876538]
+sprite_frames = SubResource("SpriteFrames_rhnau")
+animation = &"horn"
