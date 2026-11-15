@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ngfcamiug0a" path="res://images and character assets/Collar 1.PNG" id="1_6bndm"]
 [ext_resource type="Texture2D" uid="uid://bis2iu3o6k6m1" path="res://images and character assets/Collar 2.PNG" id="2_5dtfb"]
 [ext_resource type="Texture2D" uid="uid://c6vpoqwc7cdvu" path="res://images and character assets/head acc 2.PNG" id="3_4os5d"]
+[ext_resource type="Texture2D" uid="uid://docsilvfd1200" path="res://images and character assets/cori scarf.png" id="5_4os5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3p08f"]
 radius = 58.034473
@@ -36,6 +37,14 @@ animations = [{
 "loop": 1,
 "name": &"ribbon1",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4os5d")
+}],
+"loop": 1,
+"name": &"scarf1",
+"speed": 5.0
 }]
 
 [node name="clothesacc" type="CharacterBody2D" unique_id=1491631888]
@@ -50,4 +59,4 @@ shape = SubResource("RectangleShape2D_tcrup")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2074848652]
 sprite_frames = SubResource("SpriteFrames_tcrup")
-animation = &"collar1"
+animation = &"scarf1"

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://comi7bj3pjg7w" path="res://head.gd" id="1_hukeq"]
 [ext_resource type="Texture2D" uid="uid://cf4moy53evhss" path="res://images and character assets/Head 1.PNG" id="2_hukeq"]
+[ext_resource type="Texture2D" uid="uid://ccd1qkrddwqxu" path="res://images and character assets/Head 2.png" id="2_pij62"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nl2ho"]
 radius = 171.0
@@ -9,6 +10,14 @@ height = 400.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pij62")
+}],
+"loop": 1,
+"name": &"cori",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_hukeq")
@@ -27,3 +36,4 @@ shape = SubResource("CapsuleShape2D_nl2ho")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=456965115]
 sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"cori"

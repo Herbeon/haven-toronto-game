@@ -4,12 +4,15 @@ extends CharacterBody2D
 signal done_head
 
 @export var speed = 300
-@export var visual = "default"
+@export var visual = ""
 
 var paused = false
 
 func start():
-	position = Vector2(530,200)
+	visual = ["default","cori"].pick_random()
+	$AnimatedSprite2D.play(visual)
+	
+	position = Vector2(530,350)
 	
 	var direction_x = 0
 	# yay gambling

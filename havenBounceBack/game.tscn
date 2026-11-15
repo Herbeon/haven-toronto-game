@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://d4b8sey340oqa" path="res://backgrounds/porple thing.png" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://hijeq1pt7gji" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="FontFile" uid="uid://0tenstpyqr73" path="res://CoriFont.ttf" id="2_e8heu"]
+[ext_resource type="Texture2D" uid="uid://b5opp0fwf7diw" path="res://images and character assets/demo/Template.png" id="2_xfvwf"]
+[ext_resource type="Script" uid="uid://gas08x5ysysv" path="res://title_screen.gd" id="3_dhpj7"]
 [ext_resource type="PackedScene" uid="uid://djicpc76ou862" path="res://head.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://u0ltr3xuybna" path="res://images and character assets/Bg.png" id="4_x5p1p"]
@@ -13,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://crvkgv3gvwurq" path="res://ear_1.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ccxtt8gld1bal" path="res://eye_1.tscn" id="7_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://ccu8645egrb3x" path="res://ear_2.tscn" id="7_vef74"]
+[ext_resource type="Texture2D" uid="uid://ct4allsyaoqpj" path="res://images and character assets/Rxn 1.png" id="7_xa8c5"]
+[ext_resource type="Texture2D" uid="uid://bkoh5b0faixkj" path="res://images and character assets/Rxn 2.png" id="8_5b14r"]
+[ext_resource type="Texture2D" uid="uid://c5v5vl5a027pq" path="res://images and character assets/Rxn 3.png" id="8_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://dayl2ovffhxuf" path="res://backgrounds/leftpressed.png" id="8_rvswv"]
 [ext_resource type="Texture2D" uid="uid://dh1t1yxedru7f" path="res://backgrounds/rightpressed.png" id="9_boyg6"]
 [ext_resource type="PackedScene" uid="uid://x2u2rsucnlf8" path="res://mouth.tscn" id="9_vef74"]
@@ -25,6 +30,8 @@
 [ext_resource type="PackedScene" uid="uid://8nsp8p2gk6tv" path="res://clothesacc.tscn" id="23_qhcbd"]
 [ext_resource type="PackedScene" uid="uid://juk7rd5qsq8b" path="res://headacc_1.tscn" id="24_vaj68"]
 [ext_resource type="PackedScene" uid="uid://b8tgl53jjj4s6" path="res://headacc_2.tscn" id="25_i2p71"]
+[ext_resource type="PackedScene" uid="uid://bhbqukfheabro" path="res://hat.tscn" id="29_bnpwn"]
+[ext_resource type="AudioStream" uid="uid://bn6d15ak1s3d3" path="res://audio/ambience.wav" id="32_dhpj7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -33,7 +40,7 @@ font_color = Color(0.13333334, 0.105882354, 0.34901962, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_j5wjh"]
 font = ExtResource("2_e8heu")
-font_size = 30
+font_size = 50
 font_color = Color(0.2901961, 0, 1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc0e3"]
@@ -52,32 +59,73 @@ physics_layer_0/collision_layer = 1023
 physics_layer_0/collision_mask = 1023
 sources/0 = SubResource("TileSetAtlasSource_fc0e3")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xa8c5")
+}],
+"loop": 1,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_bnpwn")
+}],
+"loop": 1,
+"name": &"neutral",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5b14r")
+}],
+"loop": 1,
+"name": &"sad",
+"speed": 5.0
+}]
+
 [node name="game" type="Node2D" unique_id=1374351353]
 script = ExtResource("1_fc0e3")
+
+[node name="title_screen" type="Sprite2D" parent="." unique_id=819712015]
+z_index = 40
+position = Vector2(969.5, 539.5)
+scale = Vector2(1.9228516, 1.1123047)
+texture = ExtResource("2_xfvwf")
+script = ExtResource("3_dhpj7")
+
+[node name="title_screen2" type="TextureRect" parent="." unique_id=437923891]
+visible = false
+z_index = 40
+offset_right = 1928.0
+offset_bottom = 1106.0
+texture = ExtResource("2_xfvwf")
 
 [node name="Control" type="Control" parent="." unique_id=828224688]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1638.0
-offset_top = 550.0
-offset_right = 1678.0
-offset_bottom = 590.0
+offset_left = 1293.0
+offset_top = 686.0
+offset_right = 1333.0
+offset_bottom = 726.0
 
 [node name="Label" type="Label" parent="Control" unique_id=1692377689]
 layout_mode = 0
-offset_left = -178.0
-offset_top = 25.0
-offset_right = 307.0
-offset_bottom = 86.0
-text = "Currently placing: eye"
+offset_left = -198.0
+offset_top = 26.0
+offset_right = 287.0
+offset_bottom = 151.0
+text = "Currently placing head"
 label_settings = SubResource("LabelSettings_m6jhr")
 
 [node name="Relabel" type="Label" parent="Control" unique_id=907465893]
 layout_mode = 0
-offset_left = -151.0
-offset_top = 148.0
-offset_right = 54.0
-offset_bottom = 185.0
+offset_left = -197.0
+offset_top = 185.0
+offset_right = 145.0
+offset_bottom = 246.0
 text = "reloads left: 50"
 label_settings = SubResource("LabelSettings_j5wjh")
 
@@ -94,14 +142,19 @@ offset_bottom = 1040.0
 texture = ExtResource("4_x5p1p")
 
 [node name="controls explained" type="TextureRect" parent="." unique_id=1816787531]
-offset_left = 1069.0
-offset_top = 532.0
-offset_right = 1798.3333
-offset_bottom = 1079.0
+offset_left = 1414.0
+offset_top = 28.0
+offset_right = 2143.3333
+offset_bottom = 575.0
 texture = ExtResource("5_x5p1p")
 expand_mode = 1
 script = ExtResource("5_7sc4i")
 metadata/_edit_group_ = true
+
+[node name="incurby" type="AnimatedSprite2D" parent="controls explained" unique_id=1728557472]
+position = Vector2(-526, 500)
+sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"neutral"
 
 [node name="space" type="TextureRect" parent="controls explained" unique_id=646424990]
 layout_mode = 0
@@ -228,6 +281,12 @@ position = Vector2(-382, 1790)
 collision_layer = 64
 collision_mask = 64
 
+[node name="hat" parent="." unique_id=402993914 instance=ExtResource("29_bnpwn")]
+z_index = 28
+position = Vector2(-4, 1527)
+collision_layer = 128
+collision_mask = 128
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890427670]
 z_index = -10
 offset_left = -3.0
@@ -236,3 +295,6 @@ offset_right = 2013.0
 offset_bottom = 1223.0
 color = Color(0.9372549, 0.92941177, 0.9882353, 1)
 metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=848047066]
+stream = ExtResource("32_dhpj7")

@@ -30,12 +30,12 @@ func start():
 
 
 	placing_ear = true
-	position = Vector2(520,520)
+	position = Vector2(520,300)
 	
 	var direction_x = randf_range(-1,1)
 	# yay gambling
 	
-	var direction_y = randf_range(-0.5,0.5)
+	var direction_y = randf_range(0,1)
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
@@ -65,13 +65,14 @@ func _physics_process(delta):
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1,1), 0.1)
 			if(visual != "hungri"):
-				$AnimatedSprite2D.rotate(PI/2)
+				var rotationamount = tan(velocity.x / velocity.y)
+				$AnimatedSprite2D.rotate(rotationamount*2)
 
 				#$CollisionShape2Dbig.rotate(PI/2)
 			velocity = velocity.bounce(collision.get_normal())
 
 			#print(velocity)
-			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
+			if(abs(velocity.x) < 1500 && abs(velocity.y) < 1500):
 				velocity *= 1.1
 		can_be_paused_now = true
 

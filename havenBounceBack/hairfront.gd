@@ -15,7 +15,7 @@ func start():
 	$AnimatedSprite2D.play(visual)
 
 	placing_hf = true
-	position = Vector2(520,520)
+	position = Vector2(520,200)
 	
 	var direction_x = randf_range(-0.5,0.5)
 	# yay gambling

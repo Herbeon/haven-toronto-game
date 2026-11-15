@@ -1,7 +1,8 @@
-# haven-toronto-game
-our game for haven yay. 
+# haven toronto game: meet the new you
+welcome to the zen haven of *incurby* - clients seek to rebound from their struggles and it is your job to help reshape them.
 
 # screenshots
+
 
 # how to play
 go to the itch.io page to play. controls are listed in game (keyboard required)
@@ -9,13 +10,20 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 # tools used
 * made with godot
 * art on procreate and krita
+* music by us + a sink in the girls' washroom + edited in audacity
 * 100% human-made, no AI was used
 
 # features
-* insert number of possibilities here
+* cool title screen and art
+* rotatable sprites
+* tons of chances to gamble!
 
 # godot crash counter
 * herby: 2
+
+# things we could add
+* more customization options
+* normal version where the objects are actually aligned lol
 
 beep bop
 
@@ -31,8 +39,9 @@ hello herby
 * write readme
 * design make itch thumbnail
 * write itch description
-* draw the herby and incurable sprites
-* decoration
+* decoration art
+* cover art
+* polish
 
 the layers are (bottom to top) (z indices)
 * background (0)
@@ -60,7 +69,7 @@ collision layers:
 * 6: hair 2 (the behind)
 * 7: head accessory (2+ of them)
 * 8: hat
-* 9: face things: eyes, mouth, nose
+* 9: face things: eyes, mouth, nose, eyebrows
 * 10: decoration
 
 reloads are available, counted in a total with game script

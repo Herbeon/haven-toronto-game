@@ -10,7 +10,7 @@ var placing_mouth = false
 var can_be_paused_now = false
 
 func start():
-	visual = ["default","colon3"].pick_random()
+	visual = ["default","colon3","silly","shock","open","grin"].pick_random()
 	$AnimatedSprite2D.play(visual)
 	position = Vector2(520,520)
 
@@ -51,11 +51,13 @@ func _physics_process(delta):
 			var tween = create_tween()
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1,1), 0.1)
-			$AnimatedSprite2D.rotate(PI/2)
+			var rotationamount = tan(velocity.x / velocity.y)
+			$AnimatedSprite2D.rotate(rotationamount*2)
+
 			velocity = velocity.bounce(collision.get_normal())
 
 			#print(velocity)
-			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
+			if(abs(velocity.x) < 1500 && abs(velocity.y) < 1500):
 				velocity *= 1.1
 		can_be_paused_now = true
 
