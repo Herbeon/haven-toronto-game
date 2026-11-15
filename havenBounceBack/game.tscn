@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://hijeq1pt7gji" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://brd1dgywy1nsp" path="res://backgrounds/cyan bg.png" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://djicpc76ou862" path="res://head.tscn" id="4_7jktm"]
+[ext_resource type="Texture2D" uid="uid://fu3aolj76tm8" path="res://backgrounds/controls.png" id="4_hve3p"]
 [ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
 [ext_resource type="PackedScene" uid="uid://crvkgv3gvwurq" path="res://ear_1.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ccxtt8gld1bal" path="res://eye_1.tscn" id="7_j5wjh"]
@@ -74,6 +75,14 @@ offset_top = 16.0
 offset_right = 1040.0
 offset_bottom = 1040.0
 texture = ExtResource("3_ryrav")
+
+[node name="controls explained" type="TextureRect" parent="." unique_id=1816787531]
+offset_left = 1136.0
+offset_top = 421.0
+offset_right = 1865.3333
+offset_bottom = 968.0
+texture = ExtResource("4_hve3p")
+expand_mode = 1
 
 [node name="torso" parent="." unique_id=447771115 instance=ExtResource("4_ryrav")]
 z_index = 1

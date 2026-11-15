@@ -25,12 +25,12 @@ the layers are (bottom to top)
 
 collision layers:
 * walls are every layer
-* 1: torso + clothes (torso can take up more layers)
+* 1: torso + clothes (torso can take up more layers) : 3, 4, 5, 7, 8, 9
 * 2: more clothes
 * 3: head
 * 4: ears (2 of them)
 * 5: hair 1
-* 6: hair 2
+* 6: hair 2 (the behind)
 * 7: head accessory (2+ of them)
 * 8: hat
 * 9: face things: eyes, mouth, nose
