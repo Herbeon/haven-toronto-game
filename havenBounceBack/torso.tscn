@@ -27,6 +27,8 @@ animations = [{
 }]
 
 [node name="torso" type="Area2D" unique_id=447771115]
+collision_layer = 477
+collision_mask = 477
 script = ExtResource("1_ldi0w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1328516886]
