@@ -149,12 +149,12 @@ func hairfront_is_done():
 	clothesacc.start()
 
 func clothesacc_is_done():
-	label.text = "Currently placing:\nfirst head accessory"
+	label.text = "Currently placing:\nhead accessory 1"
 	current_part = $headacc1
 	headacc1.start()
 
 func headacc1_is_done():
-	label.text = "Currently placing:\nsecond head accessory"
+	label.text = "Currently placing:\nhead accessory 2"
 	current_part = $headacc2
 	headacc2.start()
 

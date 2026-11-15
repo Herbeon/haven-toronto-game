@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://crvkgv3gvwurq" path="res://ear_1.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ccxtt8gld1bal" path="res://eye_1.tscn" id="7_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://ccu8645egrb3x" path="res://ear_2.tscn" id="7_vef74"]
+[ext_resource type="Texture2D" uid="uid://ct4allsyaoqpj" path="res://images and character assets/Rxn 1.png" id="7_xa8c5"]
+[ext_resource type="Texture2D" uid="uid://bkoh5b0faixkj" path="res://images and character assets/Rxn 2.png" id="8_5b14r"]
 [ext_resource type="Texture2D" uid="uid://dayl2ovffhxuf" path="res://backgrounds/leftpressed.png" id="8_rvswv"]
 [ext_resource type="Texture2D" uid="uid://dh1t1yxedru7f" path="res://backgrounds/rightpressed.png" id="9_boyg6"]
 [ext_resource type="PackedScene" uid="uid://x2u2rsucnlf8" path="res://mouth.tscn" id="9_vef74"]
@@ -52,6 +54,30 @@ physics_layer_0/collision_layer = 1023
 physics_layer_0/collision_mask = 1023
 sources/0 = SubResource("TileSetAtlasSource_fc0e3")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xa8c5")
+}],
+"loop": 1,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"neutral",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5b14r")
+}],
+"loop": 1,
+"name": &"sad",
+"speed": 5.0
+}]
+
 [node name="game" type="Node2D" unique_id=1374351353]
 script = ExtResource("1_fc0e3")
 
@@ -69,15 +95,16 @@ offset_left = -178.0
 offset_top = 25.0
 offset_right = 307.0
 offset_bottom = 86.0
-text = "Currently placing: eye"
+text = "Currently placing:
+eye"
 label_settings = SubResource("LabelSettings_m6jhr")
 
 [node name="Relabel" type="Label" parent="Control" unique_id=907465893]
 layout_mode = 0
 offset_left = -151.0
-offset_top = 148.0
+offset_top = 158.0
 offset_right = 54.0
-offset_bottom = 185.0
+offset_bottom = 195.0
 text = "reloads left: 50"
 label_settings = SubResource("LabelSettings_j5wjh")
 
@@ -102,6 +129,11 @@ texture = ExtResource("5_x5p1p")
 expand_mode = 1
 script = ExtResource("5_7sc4i")
 metadata/_edit_group_ = true
+
+[node name="incurby" type="AnimatedSprite2D" parent="controls explained" unique_id=1728557472]
+position = Vector2(-196, -37)
+sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"neutral"
 
 [node name="space" type="TextureRect" parent="controls explained" unique_id=646424990]
 layout_mode = 0
