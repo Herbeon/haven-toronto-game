@@ -43,8 +43,12 @@ var reloads_left = 50
 var complete_pic = false
 @onready var current_part = $torso
 
+@onready var bg_music = $AudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	bg_music.autoplay = true
+	#load("res://audio/ambientwaterfall.wav")
+
 	$title_screen.game_started.connect(title_screen_clicked)
 	eye1.done_eye.connect(eye1_is_done)
 	eye2.done_eye2.connect(eye2_is_done)
@@ -67,6 +71,8 @@ func _ready() -> void:
 	#new_game()
 
 func _process(float) -> void:
+	if(!bg_music.playing):
+		bg_music.play()
 	if(Input.is_action_just_pressed("reload")):
 		if(reloads_left > 0 && !complete_pic):
 			current_part.start()

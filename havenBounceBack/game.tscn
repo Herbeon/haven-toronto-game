@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://juk7rd5qsq8b" path="res://headacc_1.tscn" id="24_vaj68"]
 [ext_resource type="PackedScene" uid="uid://b8tgl53jjj4s6" path="res://headacc_2.tscn" id="25_i2p71"]
 [ext_resource type="PackedScene" uid="uid://bhbqukfheabro" path="res://hat.tscn" id="29_bnpwn"]
+[ext_resource type="AudioStream" uid="uid://bn6d15ak1s3d3" path="res://audio/ambience.wav" id="32_dhpj7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -294,3 +295,6 @@ offset_right = 2013.0
 offset_bottom = 1223.0
 color = Color(0.9372549, 0.92941177, 0.9882353, 1)
 metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=848047066]
+stream = ExtResource("32_dhpj7")

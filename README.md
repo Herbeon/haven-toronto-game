@@ -10,6 +10,7 @@ go to the itch.io page to play. controls are listed in game (keyboard required)
 # tools used
 * made with godot
 * art on procreate and krita
+* music by us + a sink in the girls' washroom + edited in audacity
 * 100% human-made, no AI was used
 
 # features
