@@ -37,6 +37,9 @@
 [ext_resource type="AudioStream" uid="uid://46tgdeafia3k" path="res://audio/boing1.wav" id="33_7knny"]
 [ext_resource type="AudioStream" uid="uid://cgg51axtbbhq4" path="res://audio/boing3.wav" id="33_xex6t"]
 [ext_resource type="AudioStream" uid="uid://bxg0na46ctljf" path="res://audio/boing2.wav" id="34_aa0lp"]
+[ext_resource type="AudioStream" uid="uid://b5nbvcgmw8t5w" path="res://audio/boop.wav" id="35_4v2jo"]
+[ext_resource type="AudioStream" uid="uid://b5ka7i2oc65do" path="res://audio/beep.wav" id="36_l1i01"]
+[ext_resource type="AudioStream" uid="uid://dg7sc4g7nm55m" path="res://audio/blorp.wav" id="37_r62pu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -316,6 +319,21 @@ metadata/_edit_lock_ = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=848047066]
 stream = ExtResource("32_dhpj7")
 volume_db = 6.0
+
+[node name="Audioboop" type="AudioStreamPlayer" parent="." unique_id=1002165434]
+stream = ExtResource("35_4v2jo")
+volume_db = -15.0
+max_polyphony = 3
+
+[node name="Audiobeep" type="AudioStreamPlayer" parent="." unique_id=1311500373]
+stream = ExtResource("36_l1i01")
+volume_db = -15.0
+max_polyphony = 3
+
+[node name="Audioblorp" type="AudioStreamPlayer" parent="." unique_id=1587489464]
+stream = ExtResource("37_r62pu")
+volume_db = -15.0
+max_polyphony = 3
 
 [node name="Audioboing3" type="AudioStreamPlayer" parent="." unique_id=731505840]
 stream = ExtResource("33_xex6t")

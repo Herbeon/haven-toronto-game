@@ -48,11 +48,13 @@ var complete_pic = false
 
 @onready var bg_music = $AudioStreamPlayer
 
+var game_started_lol = false
+# can spawn at each but htat's too much work
 #@onready var boing1 = $Audioboing1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	bg_music.autoplay = true
+	bg_music.autoplay = false
 	#load("res://audio/ambientwaterfall.wav")
 	$title_screen.game_started.connect(title_screen_clicked)
 	eye1.done_eye.connect(eye1_is_done)
@@ -97,9 +99,10 @@ func _ready() -> void:
 	#new_game()
 
 func _process(float) -> void:
-	if(!bg_music.playing):
+	if(!bg_music.playing && game_started_lol):
 		bg_music.play()
 	if(Input.is_action_just_pressed("reload")):
+		$Audioboop.play()
 		if(reloads_left > 0 && !complete_pic):
 			current_part.start()
 			
@@ -108,6 +111,7 @@ func _process(float) -> void:
 		else:
 			relabel.text = "no more reloads left!"
 	if(Input.is_action_just_pressed("trashbin")):
+		$Audioblorp.play()
 		current_part.visible = false
 		current_part.got_paused()
 	#if(Input.is_action_just_pressed("newgame")):
@@ -120,9 +124,12 @@ func collisionhappened():
 	toplay.play()
 	
 func title_screen_clicked():
+	game_started_lol = true
+
 	new_game()
 
 func new_game():
+	bg_music.play()
 	# a new game. do stuff
 	# skip to eye part
 	#print("new game!")
@@ -133,6 +140,8 @@ func new_game():
 	relabel.text = "reloads left: " + str(reloads_left)
 	
 func head_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing first eye"
 	current_part = $eye1
 
@@ -141,23 +150,31 @@ func head_is_done():
 
 
 func eye1_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing second eye"
 	current_part = $eye2
 	eye2.start()
 
 func eye2_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing first eyebrow"
 	current_part = $eyebrow1
 
 	eyebrow1.start()
 	
 func eyebrow1_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing second eyebrow"
 	current_part = $eyebrow2
 	
 	eyebrow2.start()
 
 func eyebrow2_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing first ear"
 	current_part = $ear1
 	
@@ -165,6 +182,8 @@ func eyebrow2_is_done():
 
 
 func ear_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing second ear"
 
 	current_part = $ear2
@@ -172,55 +191,75 @@ func ear_is_done():
 	ear2.start()
 	
 func ear_2_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing mouth"
 
 	current_part = $mouth
 	mouth.start()
 	
 func mouth_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing back of hair"
 	
 	current_part = $hairback
 	hairback.start()
 	
 func hairback_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing front of hair"
 	
 	current_part = $hairfront
 	hairfront.start()
 	
 func hairfront_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing clothing"
 	
 	current_part = $clothesacc
 	clothesacc.start()
 
 func clothesacc_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing head accessory 1"
 	current_part = $headacc1
 	headacc1.start()
 
 func headacc1_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing head accessory 2"
 	current_part = $headacc2
 	headacc2.start()
 
 func headacc2_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing hat"
 	current_part = $hat
 	
 	hat.start()
 	
 func hat_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing decor 1"
 	current_part = $decor1
 	
 	decor1.start()
 
 func decor1_is_done():
+	$Audiobeep.play()
+
 	label.text = "Currently placing decor 2"
 	current_part = $decor2 
 	decor2.start()
 func decor2_is_done():
+	$Audiobeep.play()
+
 	label.text = "done!"
 	

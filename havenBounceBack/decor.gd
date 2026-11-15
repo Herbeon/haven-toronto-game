@@ -4,7 +4,7 @@ extends CharacterBody2D
 signal done_decor1
 signal collided
 
-@export var speed = 300
+@export var speed = 200
 @export var visual = ""
 
 var placing_decor1 = false
@@ -13,7 +13,7 @@ var can_be_paused_now = false
 func start():
 	visual = ["drop","flower","sparkle"].pick_random()
 	$AnimatedSprite2D.play(visual)
-	position = Vector2(300,300)
+	position = Vector2(520,520)
 
 	placing_decor1 = true
 	
