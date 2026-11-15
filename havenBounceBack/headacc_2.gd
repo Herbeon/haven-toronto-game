@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 signal done_headacc
+signal collided
 
 @export var speed = 300
 @export var visual = ""
@@ -47,6 +48,7 @@ func _physics_process(delta):
 		var collision = move_and_collide(velocity * delta)
 		# move and collide returns a boolean if it hits something
 		if collision:
+			collided.emit()
 			#$EyeDemo2.rotate(PI / 2)
 			var tween = create_tween()
 			tween.tween_property($AnimatedSprite2D,"scale", Vector2(1.1,1.1), 0.1)

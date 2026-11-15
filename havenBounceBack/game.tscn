@@ -32,6 +32,9 @@
 [ext_resource type="PackedScene" uid="uid://b8tgl53jjj4s6" path="res://headacc_2.tscn" id="25_i2p71"]
 [ext_resource type="PackedScene" uid="uid://bhbqukfheabro" path="res://hat.tscn" id="29_bnpwn"]
 [ext_resource type="AudioStream" uid="uid://bn6d15ak1s3d3" path="res://audio/ambience.wav" id="32_dhpj7"]
+[ext_resource type="AudioStream" uid="uid://46tgdeafia3k" path="res://audio/boing1.wav" id="33_7knny"]
+[ext_resource type="AudioStream" uid="uid://cgg51axtbbhq4" path="res://audio/boing3.wav" id="33_xex6t"]
+[ext_resource type="AudioStream" uid="uid://bxg0na46ctljf" path="res://audio/boing2.wav" id="34_aa0lp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6jhr"]
 font = ExtResource("2_e8heu")
@@ -298,3 +301,16 @@ metadata/_edit_lock_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=848047066]
 stream = ExtResource("32_dhpj7")
+volume_db = 6.0
+
+[node name="Audioboing3" type="AudioStreamPlayer" parent="." unique_id=731505840]
+stream = ExtResource("33_xex6t")
+volume_db = -15.0
+
+[node name="Audioboing2" type="AudioStreamPlayer" parent="." unique_id=1692179267]
+stream = ExtResource("34_aa0lp")
+volume_db = -15.0
+
+[node name="Audioboing1" type="AudioStreamPlayer" parent="." unique_id=501289898]
+stream = ExtResource("33_7knny")
+volume_db = -15.0

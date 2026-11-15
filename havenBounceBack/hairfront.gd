@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 signal done_hairfront
+signal collided
 
 @export var speed = 300
 @export var visual = "" 
@@ -43,6 +44,7 @@ func _physics_process(delta):
 		var collision = move_and_collide(velocity * delta)
 		# move and collide returns a boolean if it hits something
 		if collision:
+			collided.emit()
 			velocity = velocity.bounce(collision.get_normal())
 
 			#print(velocity)
