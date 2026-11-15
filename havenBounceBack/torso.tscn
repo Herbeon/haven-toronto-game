@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://csxx1eewvkopf" path="res://images and character assets/cori torso.png" id="1_50s6g"]
 [ext_resource type="Script" uid="uid://bghl6nhxvt7pg" path="res://torso.gd" id="1_ldi0w"]
-[ext_resource type="Texture2D" uid="uid://dqom3w76v11n5" path="res://images and character assets/Torso 1.PNG" id="3_vfirn"]
+[ext_resource type="Texture2D" uid="uid://dqlmoj8tc0hl8" path="res://images and character assets/Torso 1.png" id="3_vfirn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryrav"]
 size = Vector2(504, 209)

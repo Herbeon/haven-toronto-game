@@ -4,17 +4,22 @@
 [ext_resource type="Script" uid="uid://hijeq1pt7gji" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="FontFile" uid="uid://0tenstpyqr73" path="res://CoriFont.ttf" id="2_e8heu"]
 [ext_resource type="Texture2D" uid="uid://cajrw6ryob4c7" path="res://images and character assets/COVER.png" id="2_klri6"]
+[ext_resource type="Texture2D" uid="uid://b0m7syg81fde6" path="res://images and character assets/Animation/IMG_4241.PNG" id="2_qpefm"]
 [ext_resource type="Texture2D" uid="uid://b5opp0fwf7diw" path="res://images and character assets/demo/Template.png" id="2_xfvwf"]
 [ext_resource type="Script" uid="uid://gas08x5ysysv" path="res://title_screen.gd" id="3_dhpj7"]
+[ext_resource type="Texture2D" uid="uid://dx0yw5anhr6np" path="res://images and character assets/Animation/IMG_4242.PNG" id="3_tb2lt"]
 [ext_resource type="PackedScene" uid="uid://djicpc76ou862" path="res://head.tscn" id="4_7jktm"]
+[ext_resource type="Texture2D" uid="uid://d0m8cjakywre0" path="res://images and character assets/Animation/IMG_4243.PNG" id="4_cfc7e"]
 [ext_resource type="Texture2D" uid="uid://dgwa41yijgn1r" path="res://images and character assets/CLICK UPDATED.png" id="4_edr7y"]
 [ext_resource type="PackedScene" uid="uid://dpfcb61p4xb8e" path="res://torso.tscn" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://u0ltr3xuybna" path="res://images and character assets/Bg.png" id="4_x5p1p"]
 [ext_resource type="Script" uid="uid://3i7oe4mldhu7" path="res://controls_explained.gd" id="5_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://cgp0uo3r8dtef" path="res://images and character assets/Animation/IMG_4244.PNG" id="5_gh0px"]
 [ext_resource type="Texture2D" uid="uid://153lsynfw7wf" path="res://images and character assets/TITLE UPDATED.png" id="5_kq12w"]
 [ext_resource type="Texture2D" uid="uid://c5326qwksn0yl" path="res://images and character assets/TITLE UPDATED2.png" id="5_m28ev"]
 [ext_resource type="Texture2D" uid="uid://d0jh86kvc2fsn" path="res://backgrounds/controls2.png" id="5_x5p1p"]
 [ext_resource type="Texture2D" uid="uid://d3dmu0vh273mj" path="res://backgrounds/spacepressed.png" id="6_80cx4"]
+[ext_resource type="Texture2D" uid="uid://c4lwj7t6vwa2i" path="res://images and character assets/Animation/IMG_4245.PNG" id="6_v33yl"]
 [ext_resource type="Texture2D" uid="uid://r44uqnma4mm" path="res://backgrounds/enterpressed.png" id="7_e8heu"]
 [ext_resource type="PackedScene" uid="uid://crvkgv3gvwurq" path="res://ear_1.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ccxtt8gld1bal" path="res://eye_1.tscn" id="7_j5wjh"]
@@ -52,10 +57,46 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_klri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_klri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qpefm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tb2lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cfc7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gh0px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v33yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_klri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_klri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_klri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_klri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_klri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_klri6")
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3p08f"]
@@ -158,6 +199,7 @@ script = ExtResource("1_fc0e3")
 z_index = 40
 position = Vector2(960, 528)
 sprite_frames = SubResource("SpriteFrames_8m7pp")
+frame_progress = 0.68324846
 script = ExtResource("3_dhpj7")
 
 [node name="titlewords2" type="AnimatedSprite2D" parent="title_screen" unique_id=1426411777]

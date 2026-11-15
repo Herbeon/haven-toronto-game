@@ -10,6 +10,7 @@ var whee = false
 func _ready() -> void:
 	$clicktoplayit.play("default")
 	$titlewords2.play("default")
+	play("default")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
