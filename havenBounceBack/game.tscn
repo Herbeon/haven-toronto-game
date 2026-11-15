@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ccu8645egrb3x" path="res://ear_2.tscn" id="7_vef74"]
 [ext_resource type="Texture2D" uid="uid://ct4allsyaoqpj" path="res://images and character assets/Rxn 1.png" id="7_xa8c5"]
 [ext_resource type="Texture2D" uid="uid://bkoh5b0faixkj" path="res://images and character assets/Rxn 2.png" id="8_5b14r"]
+[ext_resource type="Texture2D" uid="uid://c5v5vl5a027pq" path="res://images and character assets/Rxn 3.png" id="8_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://dayl2ovffhxuf" path="res://backgrounds/leftpressed.png" id="8_rvswv"]
 [ext_resource type="Texture2D" uid="uid://dh1t1yxedru7f" path="res://backgrounds/rightpressed.png" id="9_boyg6"]
 [ext_resource type="PackedScene" uid="uid://x2u2rsucnlf8" path="res://mouth.tscn" id="9_vef74"]
@@ -64,7 +65,10 @@ animations = [{
 "name": &"happy",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_bnpwn")
+}],
 "loop": 1,
 "name": &"neutral",
 "speed": 5.0
@@ -84,10 +88,10 @@ script = ExtResource("1_fc0e3")
 [node name="Control" type="Control" parent="." unique_id=828224688]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1638.0
-offset_top = 550.0
-offset_right = 1678.0
-offset_bottom = 590.0
+offset_left = 1293.0
+offset_top = 686.0
+offset_right = 1333.0
+offset_bottom = 726.0
 
 [node name="Label" type="Label" parent="Control" unique_id=1692377689]
 layout_mode = 0
@@ -121,17 +125,17 @@ offset_bottom = 1040.0
 texture = ExtResource("4_x5p1p")
 
 [node name="controls explained" type="TextureRect" parent="." unique_id=1816787531]
-offset_left = 1069.0
-offset_top = 532.0
-offset_right = 1798.3333
-offset_bottom = 1079.0
+offset_left = 1414.0
+offset_top = 28.0
+offset_right = 2143.3333
+offset_bottom = 575.0
 texture = ExtResource("5_x5p1p")
 expand_mode = 1
 script = ExtResource("5_7sc4i")
 metadata/_edit_group_ = true
 
 [node name="incurby" type="AnimatedSprite2D" parent="controls explained" unique_id=1728557472]
-position = Vector2(-196, -37)
+position = Vector2(-526, 500)
 sprite_frames = SubResource("SpriteFrames_tcrup")
 animation = &"neutral"
 

@@ -58,7 +58,7 @@ func _physics_process(delta):
 			velocity = velocity.bounce(collision.get_normal())
 
 			#print(velocity)
-			if(abs(velocity.x) < 2000 && abs(velocity.y) < 2000):
+			if(abs(velocity.x) < 1800 && abs(velocity.y) < 1800):
 				velocity *= 1.1
 		can_be_paused_now = true
 
