@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bcrmmlyey002"]
+
+[ext_resource type="Texture2D" uid="uid://cajrw6ryob4c7" path="res://images and character assets/COVER.png" id="1_4nwvs"]
+
+[node name="parallaxtitletest" type="Node2D" unique_id=188540779]
+
+[node name="back" type="Parallax2D" parent="." unique_id=1179083335]
+
+[node name="TextureRect" type="TextureRect" parent="back" unique_id=298690010]
+offset_left = -119.0
+offset_top = -205.0
+offset_right = 1801.0
+offset_bottom = 851.0
+texture = ExtResource("1_4nwvs")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=211628081]

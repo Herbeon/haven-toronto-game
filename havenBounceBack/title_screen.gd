@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 signal game_started
 
@@ -6,12 +6,15 @@ var game_got_started = false
 
 var whee = false
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
+func _ready() -> void:
+	$clicktoplayit.play("default")
+	$titlewords2.play("default")
+	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+
 	if(game_got_started):
 		pass
 	if(whee):
