@@ -1,10 +1,46 @@
 [gd_scene format=3 uid="uid://b36r0eu3001e3"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+[ext_resource type="Script" uid="uid://7751r5utqo5x" path="res://decor.gd" id="1_737hb"]
+[ext_resource type="Texture2D" uid="uid://b1jslahki17qb" path="res://images and character assets/Deco 3 L.PNG" id="1_f1ioq"]
+[ext_resource type="Texture2D" uid="uid://kxa2o23hlxwc" path="res://images and character assets/Deco 2 L.PNG" id="2_737hb"]
+[ext_resource type="Texture2D" uid="uid://b67h6kyqb8rqi" path="res://images and character assets/Deco 1 L.PNG" id="3_ps616"]
 
-[node name="decor" type="CharacterBody2D" unique_id=1370012639]
+[sub_resource type="CircleShape2D" id="CircleShape2D_74qhc"]
+radius = 156.05127
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcrup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f1ioq")
+}],
+"loop": 1,
+"name": &"drop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_737hb")
+}],
+"loop": 1,
+"name": &"flower",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ps616")
+}],
+"loop": 1,
+"name": &"sparkle",
+"speed": 5.0
+}]
+
+[node name="decor1" type="CharacterBody2D" unique_id=1370012639]
+script = ExtResource("1_737hb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2063181223]
+shape = SubResource("CircleShape2D_74qhc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=244288109]
 sprite_frames = SubResource("SpriteFrames_tcrup")
+animation = &"drop"
